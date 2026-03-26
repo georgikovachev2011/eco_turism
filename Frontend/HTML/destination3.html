@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/homepage.css">
+    <title>Alpine cabin retreat</title>
 </head>
 <body>
     <header>
@@ -11,10 +12,11 @@
            <div class="logo">Beyond the City</div>
             <div class="burger">&#9776;</div>
             <div class="nav-links">
-                <a href="#" class="header-button selected">Home</a>
-                <a href="destinatinons.html" class="header-button">Destinations</a>
+                <a href="homepage.html" class="header-button selected">Home</a>
+                <a href="destinations.html" class="header-button">Destinations</a>
                 <a href="#" class="header-button">About</a>
                 <a href="#" class="header-button">Contact</a>
+                <a href="#" class="header-button">Favorites</a>
             </div>
         </nav>
     </header>
@@ -47,15 +49,25 @@
         <li>Sauna</li>
        </ul>
        <h2><strong>Book Your Stay</strong></h2>
-      <p>120$/night</p>
-         <p>Full Name</p>
-         <p>Email</p>
-           <p>Phone Number</p>
-              <p>Check-in Date</p>
-               <p>Check-out Date</p>
-        <p>Number of Guests</p>
-        <p>Special Requests(Optional)</p>
-        <button class="book-button">Book Now</button>
+<form action="user_base.py">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" value="john.doe@example.com"><br><br>
+  <label for="phone">Phone Number:</label><br>
+  <input type="tel" id="phone" name="phone" value="123-456-7890"><br><br>
+  <label for="checkin">Check-in Date:</label><br>
+  <input type="date" id="checkin" name="checkin"><br><br>
+  <label for="checkout">Check-out Date:</label><br>
+  <input type="date" id="checkout" name="checkout"><br><br>
+  <label for="guests">Number of Guests:</label><br>
+  <input type="number" id="guests" name="guests" min="1" max="10"><br><br>
+  <label for="requests">Special Requests (Optional):</label><br>
+  <textarea id="requests" name="requests" rows="4" cols="50"></textarea><br><br>
+  <input type="submit" value="Submit">
+</form> 
         <h6>You wont be charged now, we will contact you about the reservation</h6>
 </body>
 </html>
