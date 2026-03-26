@@ -4,24 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="../static/css/homepage.css">
-    <link rel="stylesheet" href="{% static 'css/Homepage.css' %}">
+    <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">Beyond the City</div>
-            <div class="burger">&#9776;</div>
+            <button class="burger" aria-label="Open menu">☰</button>
+
             <div class="nav-links">
-                <a href="homepage.html" class="header-button selected">Home</a>
+                <a href="homepage.html" class="header-button">Home</a>
                 <a href="destinations.html" class="header-button">Destinations</a>
                 <a href="about.html" class="header-button">About</a>
-                <a href="contaxts.html" class="header-button">Contact</a>
-                <a href="favorites.html" class="header-button">Favorites</a>
-                
+                <a href="contacts.html" class="header-button">Contact</a>
+                <a href="sign-in.html" class="login-btn">↪ Вход</a>
             </div>
         </nav>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu-top">
+                <div class="logo">Beyond the City</div>
+                <button class="close-menu" aria-label="Close menu">✕</button>
+            </div>
+
+            <div class="mobile-menu-line"></div>
+
+            <div class="mobile-menu-links">
+                <a href="homepage.html" class="mobile-link">Home</a>
+                <a href="destinations.html" class="mobile-link">Destinations</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="contacts.html" class="mobile-link">Contact</a>
+                <a href="sign-in.html" class="mobile-login-btn">↪ Вход</a>
+            </div>
+        </div>
     </header>
+
     <main>
         <section class="hero">
             <div class="hero-overlay"></div>
@@ -31,6 +49,7 @@
                 <a href="#" class="hero-btn">Explore Destinations <span>&#8594;</span></a>
             </div>
         </section>
+
         <section class="features">
             <div class="feature-box">
                 <div class="feature-icon">&#127810;</div>
@@ -94,6 +113,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-image">
                         <span class="badge">Featured</span>
@@ -110,6 +130,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-image">
                         <span class="badge">Featured</span>
@@ -126,6 +147,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-image">
                         <span class="badge">Featured</span>
@@ -142,6 +164,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-image">
                         <span class="badge">Featured</span>
@@ -161,7 +184,8 @@
             </div>
         </section>
     </main>
-        <footer>
+
+    <footer>
         <div class="footer-container">
             <div class="footer-col">
                 <div class="footer-logo">Beyond the City</div>
@@ -184,12 +208,12 @@
                 <p>✉️ hello@beyondthecity.com</p>
                 <p>📞 +1 (555) 123-4567</p>
             </div>
-
         </div>
         <div class="footer-bottom">
             © 2026 Beyond the City. All rights reserved. Promoting sustainable and responsible tourism.
         </div>
     </footer>
+
     <script src="../static/JS/homepage.js"></script>
     <script src="{% static 'js/app.js' %}"></script>
 </body>
