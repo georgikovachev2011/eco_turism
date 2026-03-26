@@ -5,3 +5,4 @@ class Signup(models.Model):
     email = models.EmailField()
     password = models.CharField()
 
+ 

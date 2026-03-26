@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/destinations.css">
+    <link rel="stylesheet" href="{% static 'css/destinations.css' %}">
     <title>Destinations</title>
 </head>
+
 <body>
     <header>
         <nav>
-           <div class="logo">Beyond the City</div>
+            <div class="logo">Beyond the City</div>
             <div class="burger">&#9776;</div>
             <div class="nav-links">
                 <a href="homepage.html" class="header-button selected">Home</a>
@@ -20,29 +22,62 @@
             </div>
         </nav>
     </header>
-    <h1><strong>Explore Destinations<strong></h1>
-    <h4>Find your perfect rural escape</h4>
-    <ul>
-        <h3><strong>Filters</strong> </h3>
+
+    <main>
+        <h1><strong>Explore Destinations</strong></h1>
+        <h4>Find your perfect rural escape</h4>
+
+        <h3><strong>Filters</strong></h3>
         <p><strong>Region</strong></p>
 
-<div class="dropdown">
-    <button onclick="toggleDropdown()" class="dropbtn">Add Region</button>
-    
-    <div id="dropdownMenu" class="dropdown-content">
-        <a href="#">Mountain</a>
-        <a href="#">Farm</a>
-        <a href="#">River</a>
-    </div>
-</div>
+        <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">Add Region</button>
+            <div id="dropdownMenu" class="dropdown-content">
+                <a href="#">Mountain</a>
+                <a href="#">Farm</a>
+                <a href="#">River</a>
+            </div>
+        </div>
+
         <p><strong>Types</strong></p>
-    </ul>
-    <a href="destination1.html"><img src="https://stockcake.com/i/forest-cabin-evening_1240191_316448">Mountain View Lodge</a>
-    <a href="destination2.html"><img src="https://stockcake.com/i/lake-house_1240191_316448">Lakefront Retreat</a>
-    <a href="destination3.html"><img src="https://stockcake.com/i/country-cottage_1240191_316448">Country Cottage</a>
-    <a href="destination4.html"><img src="https://stockcake.com/i/forest-cabin-evening_1240191_316448">Forest Cabin</a>
-    <a href="destination5.html"><img src="https://stockcake.com/i/lake-house_1240191_316448">Riverside Farm</a>
-    <a href="destination6.html"><img src="https://stockcake.com/i/country-cottage_1240191_316448">Alpine Cabin</a>
-      
+        <a href="destination1.html"><img src="https://stockcake.com/i/forest-cabin-evening_1240191_316448" alt="Mountain View">Mountain View Lodge</a>
+        <a href="destination2.html"><img src="https://stockcake.com/i/lake-house_1240191_316448" alt="Lakefront">Lakefront Retreat</a>
+        <a href="destination3.html"><img src="https://stockcake.com/i/country-cottage_1240191_316448" alt="Cottage">Country Cottage</a>
+        <a href="destination4.html"><img src="https://stockcake.com/i/forest-cabin-evening_1240191_316448" alt="Forest">Forest Cabin</a>
+        <a href="destination5.html"><img src="https://stockcake.com/i/lake-house_1240191_316448" alt="Farm">Riverside Farm</a>
+        <a href="destination6.html"><img src="https://stockcake.com/i/country-cottage_1240191_316448" alt="Alpine">Alpine Cabin</a>
+    </main>
+</body>
+
+<footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">Beyond the City</div>
+                <p>
+                    Discover authentic rural experiences, eco-friendly
+                    accommodations, and sustainable travel destinations beyond
+                    the urban landscape.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="destinations.html">Browse Destinations</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="favorites.html">My Favorites</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>📍 Rural Tourism Office<br>Eco District, Nature Valley</p>
+                <p>✉️ hello@beyondthecity.com</p>
+                <p>📞 +1 (555) 123-4567</p>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            © 2026 Beyond the City. All rights reserved. Promoting sustainable and responsible tourism.
+        </div>
+    </footer>
+    <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
