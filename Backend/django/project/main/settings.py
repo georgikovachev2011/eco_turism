@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'booking',
     'service',
-    'home'
+    'home',
+    'sign_up',
 ]
 
 MIDDLEWARE = [
