@@ -1,0 +1,75 @@
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f5f3ef;
+      color: #2f3e34;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header .icon {
+      font-size: 26px;
+      color: #4e7c5a;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .subtext {
+      margin-top: 5px;
+      color: #7a8a7f;
+      font-size: 14px;
+    }
+
+    .card {
+      margin-top: 30px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .card .heart {
+      font-size: 40px;
+      color: #d6d6d6;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      margin: 10px 0;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #7a8a7f;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #4e7c5a;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #3d6548;
+    }

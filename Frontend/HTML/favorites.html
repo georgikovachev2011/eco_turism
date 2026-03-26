@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorites</title>
+     <link rel="stylesheet" href="../static/css/fav.css" />
+     <link rel="stylesheet" href="../static/css/homepage.css" />
 </head>
 <body>
     <header>
@@ -13,10 +15,28 @@
       <div class="nav-links">
         <a href="homepage.html" class="header-button">Home</a>
         <a href="destinations.html" class="header-button">Destinations</a>
-        <a href="about.html" class="header-button selected">About</a>
-        <a href="#" class="header-button">Contact</a>
+        <a href="about.html" class="header-button">About</a>
+        <a href="contaxts.html" class="header-button">Contact</a>
+        <a href="favorites.html" class="header-button selected">Favorites</a>
       </div>
     </nav>
   </header>
+  <div class="container">
+    
+    <div class="header">
+      <div class="icon">❤</div>
+      <h1>My Favorites</h1>
+    </div>
+    
+    <div class="subtext">0 destinations saved</div>
+
+    <div class="card">
+      <div class="heart">♡</div>
+      <h2>No favorites yet</h2>
+      <p>Start exploring and save your favorite destinations for easy access</p>
+      <button class="btn" onclick="window.location.href='destinations.html'">Browse Destinations</button>
+    </div>
+
+  </div>
 </body>
 </html>
