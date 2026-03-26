@@ -8,7 +8,7 @@
 <body>
     <header>
         <nav>
-           <div class="logo">Beyond the City</div>
+            <div class="logo">Beyond the City</div>
             <div class="burger">&#9776;</div>
             <div class="nav-links">
                 <a href="homepage.html" class="header-button selected">Home</a>
@@ -19,17 +19,23 @@
             </div>
         </nav>
     </header>
-    <img src="https://images.unsplash.com/photo-forest-treehouse1">
-    <img src="https://images.unsplash.com/photo-forest-treehouse2">
-    <img src="https://images.unsplash.com/photo-forest-treehouse3">
-    <img src="https://images.unsplash.com/photo-forest-treehouse4">
-    <h6>Featured</h6>
-    <h1><strong>Forest Treehouse</strong></h1>
-    <p>Rila Forest</p>
-    <p>Live among the trees in this spectacular treehouse built 20 feet above ground.
-       This architectural marvel combines eco-friendly design with luxury,
-       featuring large windows that bring the forest inside.
-        Wake up to bird songs and fall asleep to the gentle rustling of leaves.</p>
+
+    <main>
+        <img src="https://images.unsplash.com/photo-forest-treehouse1" alt="Treehouse">
+        <img src="https://images.unsplash.com/photo-forest-treehouse2" alt="Treehouse Interior">
+        <img src="https://images.unsplash.com/photo-forest-treehouse3" alt="Treehouse View">
+        <img src="https://images.unsplash.com/photo-forest-treehouse4" alt="Treehouse Forest">
+
+        <h6>Featured</h6>
+        <h1><strong>Forest Treehouse</strong></h1>
+        <p>Rila Forest</p>
+        <p>
+            Live among the trees in this spectacular treehouse built 20 feet above ground.
+            This architectural marvel combines eco-friendly design with luxury,
+            featuring large windows that bring the forest inside.
+            Wake up to bird songs and fall asleep to the gentle rustling of leaves.
+        </p>
+
         <h3><strong>Activities</strong></h3>
         <ul>
             <li>Guided nature walks</li>
@@ -37,33 +43,67 @@
             <li>Outdoor yoga sessions</li>
             <li>Stargazing nights</li>
         </ul>
-        <h3><strong> Amenities</strong></h3>
+
+        <h3><strong>Amenities</strong></h3>
         <ul>
             <li>Solar-powered electricity</li>
             <li>Rainwater harvesting system</li>
             <li>Compostable toilets</li>
             <li>Eco-friendly toiletries</li>
         </ul>
+
         <h2><strong>Book Your Stay</strong></h2>
-<form action="user_base.py">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" value="john.doe@example.com"><br><br>
-  <label for="phone">Phone Number:</label><br>
-  <input type="tel" id="phone" name="phone" value="123-456-7890"><br><br>
-  <label for="checkin">Check-in Date:</label><br>
-  <input type="date" id="checkin" name="checkin"><br><br>
-  <label for="checkout">Check-out Date:</label><br>
-  <input type="date" id="checkout" name="checkout"><br><br>
-  <label for="guests">Number of Guests:</label><br>
-  <input type="number" id="guests" name="guests" min="1" max="10"><br><br>
-  <label for="requests">Special Requests (Optional):</label><br>
-  <textarea id="requests" name="requests" rows="4" cols="50"></textarea><br><br>
-  <input type="submit" value="Submit">
-</form> 
+        <form action="user_base.py">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value="john.doe@example.com"><br><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" value="123-456-7890"><br><br>
+            <label for="checkin">Check-in Date:</label><br>
+            <input type="date" id="checkin" name="checkin"><br><br>
+            <label for="checkout">Check-out Date:</label><br>
+            <input type="date" id="checkout" name="checkout"><br><br>
+            <label for="guests">Number of Guests:</label><br>
+            <input type="number" id="guests" name="guests" min="1" max="10"><br><br>
+            <label for="requests">Special Requests (Optional):</label><br>
+            <textarea id="requests" name="requests" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
         <h6>You wont be charged now, we will contact you about the reservation</h6>
+    </main>
+<footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">Beyond the City</div>
+                <p>
+                    Discover authentic rural experiences, eco-friendly
+                    accommodations, and sustainable travel destinations beyond
+                    the urban landscape.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="destinations.html">Browse Destinations</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="favorites.html">My Favorites</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>📍 Rural Tourism Office<br>Eco District, Nature Valley</p>
+                <p>✉️ hello@beyondthecity.com</p>
+                <p>📞 +1 (555) 123-4567</p>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            © 2026 Beyond the City. All rights reserved. Promoting sustainable and responsible tourism.
+        </div>
+    </footer>
+    <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>

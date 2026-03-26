@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="../CSS/homepage.css">
     <title>Riverside Farm</title>
 </head>
+
 <body>
- <header>
+    <header>
         <nav>
-           <div class="logo">Beyond the City</div>
+            <div class="logo">Beyond the City</div>
             <div class="burger">&#9776;</div>
             <div class="nav-links">
                 <a href="homepage.html" class="header-button selected">Home</a>
@@ -20,55 +21,96 @@
             </div>
         </nav>
     </header>
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsJTIwZGF5fGVufDB8fDB8fHww&w=1000&q=80" alt="Travel Day" class="main-image">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsJTIwZGF5fGVufDB8fDB8fHww&w=1000&q=80" alt="Travel Day" class="main-image">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsJTIwZGF5fGVufDB8fDB8fHww&w=1000&q=80" alt="Travel Day" class="main-image">
-    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-    <h6>Featured</h6>
-<h1><strong>Riverside Farm Stay</strong></h1>
-<p>Valley Region</p>
-<p>Immerse yourself in the rhythm of farm life at our riverside property.
-      Participate in daily farming activities, from feeding chickens to harvesting
-      fresh vegetables. Enjoy farm-to-table meals prepared with ingredients
-      straight from our organic gardens. The gentle sound of the nearby river
-      provides the perfect soundtrack for a restful stay.</p>
-<h3>Activities</h3>
-<ul>
-    <li>Farming activities</li>
-    <li>Fishing</li>
-    <li>Kayaking</li>
-    <li>Farm tours</li>
-    <li>Cooking Classes</li>
-</ul>
-<h3>Ameneties</h3>
-<ul>
-    <li>River Access</li>
-    <li>Organic meals</li>
-    <li>Bycicle Rental</li>
-    <li>Fresh produce</li>
-    <li>BBQ area</li>
-    <li>Pet Friendly</li>
-</ul>
-<h2><strong>Book Your Stay</strong></h2>
-<form action="user_base.py">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" value="john.doe@example.com"><br><br>
-  <label for="phone">Phone Number:</label><br>
-  <input type="tel" id="phone" name="phone" value="123-456-7890"><br><br>
-  <label for="checkin">Check-in Date:</label><br>
-  <input type="date" id="checkin" name="checkin"><br><br>
-  <label for="checkout">Check-out Date:</label><br>
-  <input type="date" id="checkout" name="checkout"><br><br>
-  <label for="guests">Number of Guests:</label><br>
-  <input type="number" id="guests" name="guests" min="1" max="10"><br><br>
-  <label for="requests">Special Requests (Optional):</label><br>
-  <textarea id="requests" name="requests" rows="4" cols="50"></textarea><br><br>
-  <input type="submit" value="Submit">
-</form> 
+
+    <main>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsJTIwZGF5fGVufDB8fDB8fHww&w=1000&q=80" alt="Travel Day" class="main-image">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsJTIwZGF5fGVufDB8fDB8fHww&w=1000&q=80" alt="Travel Day" class="main-image">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsJTIwZGF5fGVufDB8fDB8fHww&w=1000&q=80" alt="Travel Day" class="main-image">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Farm">
+
+        <h6>Featured</h6>
+        <h1><strong>Riverside Farm Stay</strong></h1>
+        <p>Valley Region</p>
+        <p>
+            Immerse yourself in the rhythm of farm life at our riverside property.
+            Participate in daily farming activities, from feeding chickens to harvesting
+            fresh vegetables. Enjoy farm-to-table meals prepared with ingredients
+            straight from our organic gardens. The gentle sound of the nearby river
+            provides the perfect soundtrack for a restful stay.
+        </p>
+
+        <h3>Activities</h3>
+        <ul>
+            <li>Farming activities</li>
+            <li>Fishing</li>
+            <li>Kayaking</li>
+            <li>Farm tours</li>
+            <li>Cooking Classes</li>
+        </ul>
+
+        <h3>Amenities</h3>
+        <ul>
+            <li>River Access</li>
+            <li>Organic meals</li>
+            <li>Bycicle Rental</li>
+            <li>Fresh produce</li>
+            <li>BBQ area</li>
+            <li>Pet Friendly</li>
+        </ul>
+
+        <h2><strong>Book Your Stay</strong></h2>
+        <form action="user_base.py">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value="john.doe@example.com"><br><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" value="123-456-7890"><br><br>
+            <label for="checkin">Check-in Date:</label><br>
+            <input type="date" id="checkin" name="checkin"><br><br>
+            <label for="checkout">Check-out Date:</label><br>
+            <input type="date" id="checkout" name="checkout"><br><br>
+            <label for="guests">Number of Guests:</label><br>
+            <input type="number" id="guests" name="guests" min="1" max="10"><br><br>
+            <label for="requests">Special Requests (Optional):</label><br>
+            <textarea id="requests" name="requests" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
         <h6>You wont be charged now, we will contact you about the reservation</h6>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">Beyond the City</div>
+                <p>
+                    Discover authentic rural experiences, eco-friendly
+                    accommodations, and sustainable travel destinations beyond
+                    the urban landscape.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="destinations.html">Browse Destinations</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="favorites.html">My Favorites</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>📍 Rural Tourism Office<br>Eco District, Nature Valley</p>
+                <p>✉️ hello@beyondthecity.com</p>
+                <p>📞 +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Beyond the City. All rights reserved. Promoting sustainable and responsible tourism.
+        </div>
+    </footer>
+
+    <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
