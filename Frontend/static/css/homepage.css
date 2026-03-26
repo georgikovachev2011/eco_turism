@@ -312,6 +312,41 @@ nav {
     color: #555;
 }
 
+.cta {
+    background-color: #4f7f5d;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-btn {
+    background-color: #e6e6e6;
+    color: #2f5e3c;
+    padding: 14px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #d5d5d5;
+}
+
 footer {
     background: linear-gradient(to right, #2f4f3a, #1f3a2c);
     color: #d8e5dc;
