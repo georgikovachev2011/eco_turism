@@ -4,61 +4,91 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
 body {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    border: 1px solid #333;
 }
 
 header {
-    background-color: #016630;
+    background-color: #f3f3f3;
     position: sticky;
     top: 0;
-    z-index: 50;
+    z-index: 1000;
 }
 
 nav {
-    max-width: 56rem;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 18px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    position: relative;
 }
 
 .logo {
-    color: #fff;
+    color: #163126;
     font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo::before {
+    content: "B";
+    width: 32px;
+    height: 32px;
+    background-color: #5b8a63;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
 }
 
 .header-button {
-    font-size: 0.8rem;
-    margin-left: 20px;
-    padding: 10px;
-    display: inline-block;
     text-decoration: none;
-    color: #fff;
-    border-radius: 10px;
+    color: #5d735d;
+    font-size: 0.9rem;
+    position: relative;
 }
 
-.header-button:hover,
-.header-button.selected {
-    background-color: #008235;
+.header-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #2f5e3c;
+    transition: 0.3s;
+}
+
+.header-button:hover::after,
+.header-button.active::after {
+    width: 100%;
+}
+
+.header-button:hover {
+    color: #2f5e3c;
 }
 
 .burger {
     display: none;
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: #2f5e3c;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-}
+@media (max-width: 768px) {
 
-@media (max-width: 56rem) {
     .burger {
         display: block;
     }
@@ -67,12 +97,12 @@ nav {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 4.5rem;
-        right: 1rem;
-        background-color: #016630;
-        width: 14rem;
-        padding: 1rem;
-        border-radius: 1rem;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #f3f3f3;
+        padding: 20px;
+        border-top: 1px solid #ccc;
     }
 
     .nav-links.active {
@@ -80,10 +110,8 @@ nav {
     }
 
     .header-button {
-        margin: 0.6rem 0;
-    }
-
-    nav {
-        position: relative;
+        padding: 12px 0;
+        font-size: 1rem;
+        color: #2f5e3c;
     }
 }
