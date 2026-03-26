@@ -228,50 +228,7 @@ nav {
     color: #4a5a4a;
     line-height: 1.7;
 }
-.join {
-  background: linear-gradient(135deg, #4f7f5f, #3a6b4c);
-  color: #ffffff;
-  min-height: 55vh; /* middle ground */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px; /* reduced padding */
-}
 
-.join-content {
-  max-width: 700px;
-}
-
-.join h1 {
-  font-size: 40px; /* slightly smaller */
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.join p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  line-height: 1.5;
-  color: #e8e8e8;
-}
-
-.join button {
-  background-color: #e0e0e0;
-  color: #2f5f45;
-  border: none;
-  padding: 14px 30px; /* slightly smaller */
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.join button:hover {
-  background-color: #ffffff;
-  transform: translateY(-2px);
-}
 footer {
     background: linear-gradient(to right, #2f4f3a, #1f3a2c);
     color: #d8e5dc;

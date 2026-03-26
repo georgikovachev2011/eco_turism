@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/destinations.css">
     <title>Destinations</title>
 </head>
 <body>
@@ -11,10 +12,11 @@
            <div class="logo">Beyond the City</div>
             <div class="burger">&#9776;</div>
             <div class="nav-links">
-                <a href="#" class="header-button selected">Home</a>
-                <a href="#" class="header-button">Destinations</a>
-                <a href="#" class="header-button">About</a>
-                <a href="#" class="header-button">Contact</a>
+                <a href="homepage.html" class="header-button selected">Home</a>
+                <a href="destinations.html" class="header-button">Destinations</a>
+                <a href="about.html" class="header-button">About</a>
+                <a href="contact.html" class="header-button">Contact</a>
+                <a href="favorites.html" class="header-button">Favorites</a>
             </div>
         </nav>
     </header>
@@ -23,12 +25,24 @@
     <ul>
         <h3><strong>Filters</strong> </h3>
         <p><strong>Region</strong></p>
+
+<div class="dropdown">
+    <button onclick="toggleDropdown()" class="dropbtn">Add Region</button>
+    
+    <div id="dropdownMenu" class="dropdown-content">
+        <a href="#">Mountain</a>
+        <a href="#">Farm</a>
+        <a href="#">River</a>
+    </div>
+</div>
         <p><strong>Types</strong></p>
     </ul>
     <a href="destination1.html"><img src="https://stockcake.com/i/forest-cabin-evening_1240191_316448">Mountain View Lodge</a>
     <a href="destination2.html"><img src="https://stockcake.com/i/lake-house_1240191_316448">Lakefront Retreat</a>
     <a href="destination3.html"><img src="https://stockcake.com/i/country-cottage_1240191_316448">Country Cottage</a>
     <a href="destination4.html"><img src="https://stockcake.com/i/forest-cabin-evening_1240191_316448">Forest Cabin</a>
+    <a href="destination5.html"><img src="https://stockcake.com/i/lake-house_1240191_316448">Riverside Farm</a>
+    <a href="destination6.html"><img src="https://stockcake.com/i/country-cottage_1240191_316448">Alpine Cabin</a>
       
 </body>
 </html>
