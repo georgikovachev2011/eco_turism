@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f3ef;
+    font-family: sans-serif;
+  }
+
+  .fav-btn {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+  }
+
+  /* Hover effect */
+  .fav-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+
+  /* Click press effect */
+  .fav-btn:active {
+    transform: scale(0.95);
+  }
+
+  .heart {
+    font-size: 26px;
+    color: #bbb;
+    transition: all 0.25s ease;
+  }
+
+  /* Active state */
+  .fav-btn.active {
+    box-shadow: 0 0 0 6px rgba(255, 107, 107, 0.15);
+  }
+
+  .fav-btn.active .heart {
+    color: #e63946;
+    transform: scale(1.2);
+  }
