@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="../static/css/destination2.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <title>Leshten Guest Homes</title>
 </head>
@@ -41,10 +42,12 @@
         </div>
     </header>
     <main>
-        <img src="../Images/destination2/LeshtemImg1.jpg">
-        <img src="../Images/destination2/LeshtenImg2.jpg">
-        <img src="../Images/destination2/LeshtenImg3.jpg">
-        <img src="../Images/destination2/LeshtenImg4.jpg">
+        <div class="images-layout">
+            <img src="../Images/destination2/LeshtemImg1.jpg">
+            <img src="../Images/destination2/LeshtenImg2.jpg">
+            <img src="../Images/destination2/LeshtenImg3.jpg">
+            <img src="../Images/destination2/LeshtenImg4.jpg">
+        </div>
 
         <h6>Featured</h6>
         <h1><strong>Leshten Guest Homes</strong></h1>
@@ -55,24 +58,29 @@
             Гостите могат да се насладят на тишина, уютни интериори и просторни дворове, подходящи за релакс.
         </p>
 
-        <h3>Activities</h3>
-        <ul>
-            <li>Fishing in the local river</li>
-            <li>Farm tours and animal feeding</li>
-            <li>Cooking classes with local ingredients</li>
-            <li>Kayaking on the river</li>
-            <li>Hiking in the surrounding mountains</li>
-        </ul>
-
-        <h3>Amenities</h3>
-        <ul>
-            <li>River access</li>
-            <li>Organic meals included</li>
-            <li>Bicycle rental</li>
-            <li>Fresh produce from the farm</li>
-            <li>BBQ area</li>
-            <li>Pet friendly</li>
-        </ul>
+        <div class="cards-grid">
+            <div class="activity-card">
+                <h4>Activities</h4>
+                <ul class="activities-list">
+                    <li>Fishing in the local river</li>
+                    <li>Farm tours and animal feeding</li>
+                    <li>Cooking classes with local ingredients</li>
+                    <li>Kayaking on the river</li>
+                    <li>Hiking in the surrounding mountains</li>
+                </ul>
+            </div>
+            <div class="amenity-card">
+                <h4>Amenities</h4>
+                <ul class="amenities-list">
+                    <li>River access</li>
+                    <li>Organic meals included</li>
+                    <li>Bicycle rental</li>
+                    <li>Fresh produce from the farm</li>
+                    <li>BBQ area</li>
+                    <li>Pet friendly</li>
+                </ul>
+            </div>
+        </div>
 
         <h2><strong>Book Your Stay</strong></h2>
         <form action="user_base.py">
@@ -97,43 +105,44 @@
 
         <h6>You wont be charged now, we will contact you about the reservation</h6>
         <h1>📍 Leshten Guest Homes – с. Лещен</h1>
-    <iframe
-        width="700"
-        height="500"
-        src="https://www.google.com/maps?q=41.636205,23.826456&z=15&output=embed">
-    </iframe>
-<div class="info">
+        <div class="location-card">
+            <h3><strong>Location</strong></h3>
+            <p>Coordinates: 41.636205, 23.826456</p>
+            <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=41.636205,23.826456&z=15&output=embed"></iframe>
+        </div><div class="info">
     <h2>📌 Координати</h2>
     <p><b>41.636205, 23.826456</b></p>
     <h2>🏔️ Атракции наблизо</h2>
-    <h3>🏘️ с. Лещен (архитектурен резерват)</h3>
-    <p>
-        Традиционно българско село с каменни къщи и гледка към Пирин. :contentReference[oaicite:2]{index=2}
-    </p>
-    <h3>🏛️ с. Ковачевица</h3>
-    <p>
-        🕒 Време: ~2–3 часа (отиване и връщане)<br>
-        📏 Разстояние: ~6–8 км<br>
-        ⚡ Тrudност: лесна към средна
-    </p>
-    <h3>🌲 Тъмната гора (резерват)</h3>
-    <p>
-        🕒 Време: ~3–4 часа<br>
-        📏 Разстояние: ~8–10 км<br>
-        ⚡ Тrudност: средна
-    </p>
-    <h3>🏞️ Каньонът на р. Канина</h3>
-    <p>
-        🕒 Време: ~2–3 часа<br>
-        📏 Разстояние: ~5–7 км<br>
-        ⚡ Тrudност: средна
-    </p>
-    <h3>♨️ Огняново (минерални бани)</h3>
-    <p>
-        🕒 Време: ~1–2 часа (разходка/релакс)<br>
-        📏 Разстояние: ~5 км (по-добре с кола)<br>
-        ⚡ Тrudност: лесна
-    </p>
+    <div class="cards-grid">
+        <div class="attraction-card">
+            <h4>🏘️ с. Лещен (архитектурен резерват)</h4>
+            <p>Традиционно българско село с каменни къщи и гледка към Пирин.</p>
+        </div>
+        <div class="attraction-card">
+            <h4>🏛️ с. Ковачевица</h4>
+            <p>🕒 Време: ~2–3 часа (отиване и връщане)<br>
+            📏 Разстояние: ~6–8 км<br>
+            ⚡ Трудност: лесна към средна</p>
+        </div>
+        <div class="attraction-card">
+            <h4>🌲 Тъмната гора (резерват)</h4>
+            <p>🕒 Време: ~3–4 часа<br>
+            📏 Разстояние: ~8–10 км<br>
+            ⚡ Трудност: средна</p>
+        </div>
+        <div class="attraction-card">
+            <h4>🏞️ Каньонът на р. Канина</h4>
+            <p>🕒 Време: ~2–3 часа<br>
+            📏 Разстояние: ~5–7 км<br>
+            ⚡ Трудност: средна</p>
+        </div>
+        <div class="attraction-card">
+            <h4>♨️ Огняново (минерални бани)</h4>
+            <p>🕒 Време: ~1–2 часа (разходка/релакс)<br>
+            📏 Разстояние: ~5 км (по-добре с кола)<br>
+            ⚡ Трудност: лесна</p>
+        </div>
+    </div>
 </div>
     </main>
 
