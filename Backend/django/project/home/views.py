@@ -25,8 +25,8 @@ def pay(request):
 def reset_password(request):
     return render(request, 'reset-password.html')
 
-def destination(request):
-    return render(request, 'destination.html')
+def destinations(request):
+    return render(request, 'destinations.html')
 
 def sign_in(request):
     return render(request, 'sign_in.html')
