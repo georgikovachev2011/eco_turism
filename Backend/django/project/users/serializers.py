@@ -13,3 +13,7 @@ class SigninSerializer(serializers.Serializer):
 class ResetpasswordSerializer(serializers.Serializer):
     email = serializers.EmailField()
     code = serializers.CharField()
+    
+class Codeconfirm(serializers.Serializer):
+    code = serializers.CharField()
+    password = serializers.CharField()

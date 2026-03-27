@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,14 +33,14 @@
             <input type="checkbox" />
             Remember me
           </label>
-          <a href="forgot_password.html" class="link">Forgot Password?</a>
+          <a href="/forgot_password" class="link">Forgot Password?</a>
         </div>
 
         <button type="submit" class="auth-btn">Login</button>
 
         <p class="switch-text">
           Don’t have an account?
-          <a href="sign-up.html" class="link">Register</a>
+          <a href="/sign-up" class="link">Register</a>
         </p>
 
         <p id="signinMessage" class="message"></p>
@@ -46,6 +48,6 @@
     </div>
   </main>
 
-  <script src="../static/JS/sign-in-up.js"></script>
+  <script src="{% static 'js/sign-in-up.js' %}"></script>
 </body>
 </html>

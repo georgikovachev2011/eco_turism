@@ -16,5 +16,5 @@ form.addEventListener("submit", function (e) {
     localStorage.setItem("resetToken", token);
     localStorage.setItem("resetEmail", email);
 
-    window.location.href = `email-sent.html?token=${token}`;
+    window.location.href = `/email_sent?token=${token}`;
 });
