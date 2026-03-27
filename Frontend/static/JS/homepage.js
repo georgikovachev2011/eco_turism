@@ -1,3 +1,7 @@
+const burger = document.querySelector(".burger");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeMenu = document.querySelector(".close-menu");
+
 fetch("/homepage_response/")
 .then(response => response.json())
 .then(data => {
@@ -35,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeMenu = document.querySelector(".close-menu");
     const favoriteButtons = document.querySelectorAll(".favorite");
 
+
     if (burger && mobileMenu) {
         burger.addEventListener("click", () => {
             mobileMenu.classList.add("active");
@@ -56,7 +61,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-if(localStorage.getItem("authUser")){
-    document.getElementById("login-button").remove()
-}

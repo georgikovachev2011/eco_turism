@@ -224,15 +224,8 @@ nav {
 }
 
 .filters h2 {
-<<<<<<< HEAD
     font-size: 18px;
     margin-bottom: 18px;
-=======
-  font-size: 18px;
-  margin-bottom: 18px;
-  text-align: center;
-
->>>>>>> 675089a92251ad6ba30137fa7702e9331c6031e8
 }
 
 .filters label {
@@ -327,16 +320,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .card-grid {
-<<<<<<< HEAD
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-=======
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 0px 40px 0px 40px; 
->>>>>>> 675089a92251ad6ba30137fa7702e9331c6031e8
 }
 
 .card {
@@ -360,17 +346,10 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .card-img img {
-<<<<<<< HEAD
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-=======
-  width: 75%;
-  aspect-ratio:16/9 ;
-  object-fit: cover;
-  display: block;
->>>>>>> 675089a92251ad6ba30137fa7702e9331c6031e8
 }
 
 .badge {
@@ -422,7 +401,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .card-body p {
-<<<<<<< HEAD
     margin: 4px 0 0;
     color: #6b7280;
     font-size: 14px;
@@ -520,12 +498,4 @@ footer {
     .mobile-menu {
         display: none;
     }
-=======
-  margin: 4px 0 0;
-  color: #6b7280;
-  font-size: 14px;
-}
-.section-title{
-  text-align: center;
->>>>>>> 675089a92251ad6ba30137fa7702e9331c6031e8
 }
