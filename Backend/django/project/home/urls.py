@@ -11,6 +11,6 @@ urlpatterns=[
     path('pay/', views.pay, name="pay"),
     path('reset_password/', views.reset_password, name="reset_password"),
     path('destination/', views.destination, name="destination"),
-    path('sign_up/', views.sign_up, name="sign_up"),
-    path('sign_in/', views.sign_in, name="sign_in"),
+    path('sign-in/', views.signinPage, name="signin"),
+    path('sign-up/', views.signUpPage, name="signup"),
 ]
