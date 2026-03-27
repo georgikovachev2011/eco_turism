@@ -1,99 +1,63 @@
-const signupForm = document.getElementById("signupForm");
-const signinForm = document.getElementById("signinForm");
+document.addEventListener("DOMContentLoaded", () => {
+    const signinForm = document.getElementById("signinForm");
+    const signinUsername = document.getElementById("signinUsername");
+    const signinPassword = document.getElementById("signinPassword");
+    const rememberMe = document.getElementById("rememberMe");
+    const signinMessage = document.getElementById("signinMessage");
 
-if (signupForm) {
-  signupForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const username = document.getElementById("signupUsername").value.trim();
-    const email = document.getElementById("signupEmail").value.trim();
-    const password = document.getElementById("signupPassword").value;
-    const confirmPassword = document.getElementById("signupConfirmPassword").value;
-    const message = document.getElementById("signupMessage");
-
-    message.textContent = "";
-    message.className = "message";
-
-    if (password.length < 6) {
-      message.textContent = "Password must be at least 6 characters.";
-      message.classList.add("error");
-      return;
+    if (!signinForm || !signinUsername || !signinPassword || !signinMessage) {
+        return;
     }
 
-    if (password !== confirmPassword) {
-      message.textContent = "Passwords do not match.";
-      message.classList.add("error");
-      return;
+    signinForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const username = signinUsername.value.trim();
+        const password = signinPassword.value.trim();
+
+        const savedUsername = localStorage.getItem("registeredUsername");
+        const savedPassword =
+            localStorage.getItem("userPassword") ||
+            localStorage.getItem("registeredPassword");
+
+        signinMessage.classList.remove("success", "error");
+
+        if (!username || !password) {
+            signinMessage.textContent = "Please fill in all fields.";
+            signinMessage.classList.add("error");
+            return;
+        }
+
+        if (!savedUsername || !savedPassword) {
+            signinMessage.textContent = "No account found. Please register first.";
+            signinMessage.classList.add("error");
+            return;
+        }
+
+        if (username === savedUsername && password === savedPassword) {
+            if (rememberMe && rememberMe.checked) {
+                localStorage.setItem("rememberedUser", username);
+            } else {
+                localStorage.removeItem("rememberedUser");
+            }
+
+            signinMessage.textContent = "Login successful.";
+            signinMessage.classList.add("success");
+
+            setTimeout(() => {
+                window.location.href = "/home";
+            }, 800);
+        } else {
+            signinMessage.textContent = "Invalid username or password.";
+            signinMessage.classList.add("error");
+        }
+    });
+
+    const rememberedUser = localStorage.getItem("rememberedUser");
+    if (rememberedUser) {
+        signinUsername.value = rememberedUser;
+        if (rememberMe) {
+            rememberMe.checked = true;
+        }
     }
-
-    const user = {
-      username,
-      email,
-      password
-    };
-
-    localStorage.setItem("authUser", JSON.stringify(user));
-
-    message.textContent = "Registration successful. Redirecting to login...";
-    message.classList.add("success");
-    fetch('/users/signup/', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        username: user.username,
-        email: user.email,
-        password1: user.password,
-        password2: user.password
-    })
-})
-.catch(error => console.error(error));
-    setTimeout(() => {
-      window.location.href = "/sign-in";
-    }, 1500);
-  });
-}
-
-if (signinForm) {
-  signinForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const username = document.getElementById("signinUsername").value.trim();
-    const password = document.getElementById("signinPassword").value;
-    const message = document.getElementById("signinMessage");
-
-    message.textContent = "";
-    message.className = "message";
-
-    const savedUser = JSON.parse(localStorage.getItem("authUser"));
-
-    fetch('/users/signin/', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        username: username,
-        password: password,
-    })
-})
-.then(_ =>  setTimeout(() => {
-      window.location.href = "/home";
-    }, 1500))
-.catch(error => console.error(error));
-    if (!savedUser) {
-      message.textContent = "No account found. Please register first.";
-      message.classList.add("error");
-      return;
-    }
-
-    if (username === savedUser.username && password === savedUser.password) {
-      message.textContent = "Login successful.";
-      message.classList.add("success");
-    } else {
-      message.textContent = "Invalid username or password.";
-      message.classList.add("error");
-    }
-  });
-}
+});

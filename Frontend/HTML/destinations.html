@@ -1,10 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations</title>
-    <link rel="stylesheet" href="../static/css/destinations.css">
     <link rel="stylesheet" href="{% static 'css/destinations.css' %}">
 </head>
 <body>
@@ -53,21 +53,21 @@
         <aside class="filters">
             <h2>Filters</h2>
 
-            <label>Search</label>
+            <label for="searchInput">Search</label>
             <div class="search-box">
-                <input type="text" placeholder="Search destinations...">
+                <input type="text" id="searchInput" placeholder="Search destinations...">
             </div>
 
-            <label>Region</label>
-            <select>
+            <label for="regionSelect">Region</label>
+            <select id="regionSelect">
                 <option>All regions</option>
                 <option>Rhodopes</option>
                 <option>Zheravna</option>
                 <option>Leshten</option>
             </select>
 
-            <label>Type</label>
-            <select>
+            <label for="typeSelect">Type</label>
+            <select id="typeSelect">
                 <option>All types</option>
                 <option>Guest House</option>
                 <option>Eco House</option>
@@ -90,7 +90,7 @@
             <div class="card-grid">
                 <a href="destination1.html" class="card">
                     <div class="card-img">
-                        <img src="static/Images/1/1.jpg" alt="Gaitana Guest House">
+                        <img src="{% static 'Images/1/1.jpg' %}" alt="Gaitana Guest House">
                         <span class="badge">Featured</span>
                         <button class="heart" type="button">♡</button>
                     </div>
@@ -102,7 +102,7 @@
 
                 <a href="destination2.html" class="card">
                     <div class="card-img">
-                        <img src="static/Images/2/1.jpg" alt="Leshten Guest Homes">
+                        <img src="{% static 'Images/2/1.jpg' %}" alt="Leshten Guest Homes">
                         <span class="badge">Featured</span>
                         <button class="heart" type="button">♡</button>
                     </div>
@@ -114,7 +114,7 @@
 
                 <a href="destination3.html" class="card">
                     <div class="card-img">
-                        <img src="static/Images/3/1.jpg" alt="Vesko and Suzi Guest House">
+                        <img src="{% static 'Images/3/1.jpg' %}" alt="Vesko and Suzi Guest House">
                         <span class="badge">Featured</span>
                         <button class="heart" type="button">♡</button>
                     </div>
@@ -126,7 +126,7 @@
 
                 <a href="destination4.html" class="card">
                     <div class="card-img">
-                        <img src="static/Images/4/1.jpg" alt="Gela Guest House Silence">
+                        <img src="{% static 'Images/4/1.jpg' %}" alt="Gela Guest House Silence">
                         <span class="badge">Featured</span>
                         <button class="heart" type="button">♡</button>
                     </div>
@@ -138,7 +138,7 @@
 
                 <a href="destination5.html" class="card">
                     <div class="card-img">
-                        <img src="static/Images/5/1.jpg" alt="Yovina House">
+                        <img src="{% static 'Images/5/1.jpg' %}" alt="Yovina House">
                         <span class="badge">Featured</span>
                         <button class="heart" type="button">♡</button>
                     </div>
@@ -150,7 +150,7 @@
 
                 <a href="destination6.html" class="card">
                     <div class="card-img">
-                        <img src="static/Images/6/1.jpg" alt="Eco House Zheravna">
+                        <img src="{% static 'Images/6/1.jpg' %}" alt="Eco House Zheravna">
                         <span class="badge">Featured</span>
                         <button class="heart" type="button">♡</button>
                     </div>
@@ -195,7 +195,6 @@
         </div>
     </footer>
 
-    <script src="../static/js/destinations.js"></script>
     <script src="{% static 'js/destinations.js' %}"></script>
 </body>
 </html>

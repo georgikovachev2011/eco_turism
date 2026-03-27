@@ -1,12 +1,10 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="../static/css/contaxts.css">
     <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
 </head>
 <body>
@@ -20,12 +18,12 @@
             <button class="burger" aria-label="Open menu">☰</button>
 
             <div class="nav-links">
-                <a href="homepage.html" class="header-button">Home</a>
-                <a href="destinations.html" class="header-button">Destinations</a>
-                <a href="about.html" class="header-button">About</a>
-                <a href="contacts.html" class="header-button selected">Contact</a>
-                <a href="favorites.html" class="header-button">♡ Favorites</a>
-                <a href="sign-in.html" class="login-btn">↪ Вход</a>
+                <a href="/home" class="header-button">Home</a>
+                <a href="/destinations" class="header-button">Destinations</a>
+                <a href="/about" class="header-button">About</a>
+                <a href="/contacts" class="header-button selected">Contact</a>
+                <a href="/favorites" class="header-button">♡ Favorites</a>
+                <a href="/sign-in" class="login-btn">↪ Вход</a>
             </div>
         </nav>
 
@@ -41,12 +39,12 @@
             <div class="mobile-menu-line"></div>
 
             <div class="mobile-menu-links">
-                <a href="homepage.html" class="mobile-link">Home</a>
-                <a href="destinations.html" class="mobile-link">Destinations</a>
-                <a href="about.html" class="mobile-link">About</a>
-                <a href="contacts.html" class="mobile-link">Contact</a>
-                <a href="favorites.html" class="mobile-link favorites-link">♡ Favorites</a>
-                <a href="sign-in.html" class="mobile-login-btn">↪ Вход</a>
+                <a href="/home" class="mobile-link">Home</a>
+                <a href="/destinations" class="mobile-link">Destinations</a>
+                <a href="/about" class="mobile-link">About</a>
+                <a href="/contacts" class="mobile-link">Contact</a>
+                <a href="/favorites" class="mobile-link favorites-link">♡ Favorites</a>
+                <a href="/sign-in" class="mobile-login-btn">↪ Вход</a>
             </div>
         </div>
     </header>
@@ -93,17 +91,17 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input id="name" type="text" placeholder="John Doe">
+                            <input type="text" id="name" placeholder="John Doe">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input id="email" type="email" placeholder="john@example.com">
+                            <input type="email" id="email" placeholder="john@example.com">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input id="subject" type="text" placeholder="How can we help?">
+                        <input type="text" id="subject" placeholder="How can we help?">
                     </div>
 
                     <div class="form-group">
@@ -130,10 +128,10 @@
 
             <div class="footer-col">
                 <h3>Quick Links</h3>
-                <a href="destinations.html">Browse Destinations</a>
-                <a href="about.html">About Us</a>
-                <a href="contacts.html">Contact</a>
-                <a href="favorites.html">My Favorites</a>
+                <a href="/destinations">Browse Destinations</a>
+                <a href="/about">About Us</a>
+                <a href="/contacts">Contact</a>
+                <a href="/favorites">My Favorites</a>
             </div>
 
             <div class="footer-col">
@@ -149,7 +147,6 @@
         </div>
     </footer>
 
-    <script src="../static/js/contaxts.js"></script>
     <script src="{% static 'js/contacts.js' %}"></script>
 </body>
 </html>

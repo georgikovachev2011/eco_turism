@@ -1,20 +1,37 @@
-const form = document.querySelector(".forgot-box");
-const emailInput = document.getElementById("email");
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("resetForm");
+    const newPasswordInput = document.getElementById("newPassword");
+    const confirmPasswordInput = document.getElementById("confirmPassword");
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const email = emailInput.value.trim();
-
-    if (!email) {
-        alert("Please enter your email address.");
+    if (!form || !newPasswordInput || !confirmPasswordInput) {
         return;
     }
 
-    const token = Math.random().toString(36).substring(2) + Date.now().toString(36);
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    localStorage.setItem("resetToken", token);
-    localStorage.setItem("resetEmail", email);
+        const newPassword = newPasswordInput.value.trim();
+        const confirmPassword = confirmPasswordInput.value.trim();
 
-    window.location.href = `/email_sent?token=${token}`;
+        if (!newPassword || !confirmPassword) {
+            alert("Please fill in both password fields.");
+            return;
+        }
+
+        if (newPassword.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            return;
+        }
+
+        if (newPassword !== confirmPassword) {
+            alert("Passwords do not match.");
+            return;
+        }
+
+        localStorage.setItem("userPassword", newPassword);
+        localStorage.removeItem("resetToken");
+
+        alert("Your password has been reset successfully.");
+        window.location.href = "/sign-in";
+    });
 });
