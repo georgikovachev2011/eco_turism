@@ -1,6 +1,5 @@
 from django.db import models
-
-from django.db import models    
+ 
 class Destination_Pages(models.Model):
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
@@ -11,6 +10,8 @@ class Destination_Pages(models.Model):
     dollars_per_night = models.IntegerField()
     activities = models.CharField()
     amenities = models.CharField()
+    id = models.AutoField(primary_key=True)
+
 class Items(models.Model):
     destination_Pages = models.ForeignKey(Destination_Pages, on_delete=models.CASCADE)
 
