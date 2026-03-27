@@ -1,3 +1,9 @@
+fetch("/homepage_response/")
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+})
+
 document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".burger");
     const mobileMenu = document.querySelector(".mobile-menu");
@@ -26,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-console.log(localStorage.getItem("authUser"))
 if(localStorage.getItem("authUser")){
     document.getElementById("login-button").remove()
 }
