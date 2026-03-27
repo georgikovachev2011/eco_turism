@@ -1,160 +1,169 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/destinations.css">
-    <link rel="stylesheet" href="../static/CSS/homepage.css">
-    <link rel="stylesheet" href="{% static 'css/destinations.css' %}">
     <title>Destinations</title>
+    <link rel="stylesheet" href="../static/css/destinations.css">
+    <link rel="stylesheet" href="{% static 'css/destinations.css' %}">
 </head>
 <body>
-
     <header>
         <nav>
-            <div class="logo">Beyond the City</div>
-            <div class="burger">&#9776;</div>
+            <div class="logo desktop-logo">
+                <span class="logo-icon">B</span>
+                <span class="logo-text">Beyond the City</span>
+            </div>
+
+            <button class="burger" aria-label="Open menu">☰</button>
+
             <div class="nav-links">
-                <a href="/home" class="header-button selected">Home</a>
-                <a href="/destinations" class="header-button">Destinations</a>
-                <a href="/about" class="header-button">About</a>
-                <a href="/contaxts" class="header-button">Contact</a>
-                <a href="/favorites" class="header-button">Favorites</a>
+                <a href="homepage.html" class="header-button">Home</a>
+                <a href="destinations.html" class="header-button selected">Destinations</a>
+                <a href="about.html" class="header-button">About</a>
+                <a href="contacts.html" class="header-button">Contact</a>
+                <a href="favorites.html" class="header-button">♡ Favorites</a>
+                <a href="sign-in.html" class="login-btn">↪ Вход</a>
             </div>
         </nav>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu-top">
+                <div class="logo">
+                    <span class="logo-icon">B</span>
+                    <span class="logo-text">Beyond the City</span>
+                </div>
+                <button class="close-menu" aria-label="Close menu">✕</button>
+            </div>
+
+            <div class="mobile-menu-line"></div>
+
+            <div class="mobile-menu-links">
+                <a href="homepage.html" class="mobile-link">Home</a>
+                <a href="destinations.html" class="mobile-link">Destinations</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="contacts.html" class="mobile-link">Contact</a>
+                <a href="favorites.html" class="mobile-link favorites-link">♡ Favorites</a>
+                <a href="sign-in.html" class="mobile-login-btn">↪ Вход</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-<div class="filters">
-  <h2>Filters</h2>
+    <main class="destinations-layout">
+        <aside class="filters">
+            <h2>Filters</h2>
 
-  <!-- Search -->
-  <label>Search</label>
-  <div class="search-box">
-    <input type="text" placeholder="Search destinations...">
-  </div>
+            <label>Search</label>
+            <div class="search-box">
+                <input type="text" placeholder="Search destinations...">
+            </div>
 
-  <!-- Region -->
-  <label>Region</label>
-  <select>
-    <option>All regions</option>
-    <option>Europe</option>
-    <option>Asia</option>
-    <option>America</option>
-  </select>
+            <label>Region</label>
+            <select>
+                <option>All regions</option>
+                <option>Rhodopes</option>
+                <option>Zheravna</option>
+                <option>Leshten</option>
+            </select>
 
-  <!-- Type -->
-  <label>Type</label>
-  <select>
-    <option>All types</option>
-    <option>Beach</option>
-    <option>Mountain</option>
-    <option>City</option>
-  </select>
+            <label>Type</label>
+            <select>
+                <option>All types</option>
+                <option>Guest House</option>
+                <option>Eco House</option>
+                <option>Traditional Home</option>
+            </select>
 
-  <!-- Price -->
-  <div class="price-label">
-    Price Range: <span id="priceValue">$0 - $200</span>
-  </div>
+            <div class="price-label">
+                Price Range: <span id="priceValue">0 lv - 200 lv</span>
+            </div>
 
-  <div class="slider-group">
-    <input type="range" id="minSlider" min="0" max="200" value="0">
-    <input type="range" id="maxSlider" min="0" max="200" value="200">
-  </div>
-</div>
+            <div class="slider-group">
+                <input type="range" id="minSlider" min="0" max="200" value="0">
+                <input type="range" id="maxSlider" min="0" max="200" value="200">
+            </div>
+        </aside>
 
-      <div class="types">
-    
-  <h3 class = "section-title">Types</h3>
+        <section class="types">
+            <h3>Types</h3>
 
-  <div class="card-grid">
+            <div class="card-grid">
+                <a href="destination1.html" class="card">
+                    <div class="card-img">
+                        <img src="https://bgstay.com/imgs/objects/62069/1.jpg" alt="Gaitana Guest House">
+                        <span class="badge">Featured</span>
+                        <button class="heart" type="button">♡</button>
+                    </div>
+                    <div class="card-body">
+                        <h4>Къща за гости Гайтана</h4>
+                        <p>Широка лъка</p>
+                    </div>
+                </a>
 
-    <!-- 1 -->
-    <a href="/destination" class="card">
-      <div class="card-img">
-        <img src="https://bgstay.com/imgs/objects/62069/1.jpg">
-        <span class="badge">Featured</span>
-        <span class="heart">♡</span>
-      </div>
-      <div class="card-body">
-        <h4>Къща за гости Гайтана</h4>
-        <p>Широка лъка</p>
-      </div>
-    </a>
+                <a href="destination2.html" class="card">
+                    <div class="card-img">
+                        <img src="https://leshtenhomes.com/images/house1.jpg" alt="Leshten Guest Homes">
+                        <span class="badge">Featured</span>
+                        <button class="heart" type="button">♡</button>
+                    </div>
+                    <div class="card-body">
+                        <h4>Leshten Guest Homes</h4>
+                        <p>Leshten</p>
+                    </div>
+                </a>
 
-    <!-- 2 -->
-    <a href="/destination" class="card">
-      <div class="card-img">
-        <img src="https://leshtenhomes.com/images/house1.jpg">
-        <span class="badge">Featured</span>
-        <span class="heart">♡</span>
-      </div>
-      <div class="card-body">
-        <h4>Leshten Guest Homes</h4>
-        <p>Leshten</p>
-      </div>
-    </a>
+                <a href="destination3.html" class="card">
+                    <div class="card-img">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/138450215.jpg" alt="Vesko and Suzi Guest House">
+                        <span class="badge">Featured</span>
+                        <button class="heart" type="button">♡</button>
+                    </div>
+                    <div class="card-body">
+                        <h4>Vesko &amp; Suzi Guest House</h4>
+                        <p>Rhodope Mountains</p>
+                    </div>
+                </a>
 
-    <!-- 3 -->
-    <a href="/destination" class="card">
-      <div class="card-img">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/138450215.jpg">
-        <span class="badge">Featured</span>
-        <span class="heart">♡</span>
-      </div>
-      <div class="card-body">
-        <h4>Vesko & Suzi Guest House</h4>
-        <p>Rhodope Mountains</p>
-      </div>
-    </a>
+                <a href="destination4.html" class="card">
+                    <div class="card-img">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/210458019.jpg" alt="Gela Guest House Silence">
+                        <span class="badge">Featured</span>
+                        <button class="heart" type="button">♡</button>
+                    </div>
+                    <div class="card-body">
+                        <h4>Gela Guest House Silence</h4>
+                        <p>Gela Village</p>
+                    </div>
+                </a>
 
-    <!-- 4 -->
-    <a href="/destination" class="card">
-      <div class="card-img">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/210458019.jpg">
-        <span class="badge">Featured</span>
-        <span class="heart">♡</span>
-      </div>
-      <div class="card-body">
-        <h4>Gela Guest House Silence</h4>
-        <p>Gela Village</p>
-      </div>
-    </a>
+                <a href="destination5.html" class="card">
+                    <div class="card-img">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/93874654.jpg" alt="Yovina House">
+                        <span class="badge">Featured</span>
+                        <button class="heart" type="button">♡</button>
+                    </div>
+                    <div class="card-body">
+                        <h4>Yovina House</h4>
+                        <p>Zheravna</p>
+                    </div>
+                </a>
 
-    <!-- 5 -->
-    <a href="/destination" class="card">
-      <div class="card-img">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/93874654.jpg">
-        <span class="badge">Featured</span>
-        <span class="heart">♡</span>
-      </div>
-      <div class="card-body">
-        <h4>Yovina House</h4>
-        <p>Zheravna</p>
-      </div>
-    </a>
-
-    <!-- 6 -->
-    <a href="/destination" class="card">
-      <div class="card-img">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/207548512.jpg">
-        <span class="badge">Featured</span>
-        <span class="heart">♡</span>
-      </div>
-      <div class="card-body">
-        <h4>Eco House Zheravna</h4>
-        <p>Eco Village</p>
-      </div>
-    </a>
-
-  </div>
-</div>
+                <a href="destination6.html" class="card">
+                    <div class="card-img">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/207548512.jpg" alt="Eco House Zheravna">
+                        <span class="badge">Featured</span>
+                        <button class="heart" type="button">♡</button>
+                    </div>
+                    <div class="card-body">
+                        <h4>Eco House Zheravna</h4>
+                        <p>Eco Village</p>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
-</body>
 
-<footer>
+    <footer>
         <div class="footer-container">
             <div class="footer-col">
                 <div class="footer-logo">Beyond the City</div>
@@ -164,26 +173,29 @@
                     the urban landscape.
                 </p>
             </div>
+
             <div class="footer-col">
                 <h3>Quick Links</h3>
-                <a href="/destinations">Browse Destinations</a>
-                <a href="/about">About Us</a>
-                <a href="contact.html">Contact</a>
-                <a href="/favorites">My Favorites</a>
+                <a href="destinations.html">Browse Destinations</a>
+                <a href="about.html">About Us</a>
+                <a href="contacts.html">Contact</a>
+                <a href="favorites.html">My Favorites</a>
             </div>
+
             <div class="footer-col">
                 <h3>Contact</h3>
                 <p>📍 Rural Tourism Office<br>Eco District, Nature Valley</p>
                 <p>✉️ hello@beyondthecity.com</p>
                 <p>📞 +1 (555) 123-4567</p>
             </div>
-
         </div>
+
         <div class="footer-bottom">
             © 2026 Beyond the City. All rights reserved. Promoting sustainable and responsible tourism.
         </div>
     </footer>
-        <script src="../static/JS/destinations.js"></script>
-    <script src="{% static 'js/app.js' %}"></script>
+
+    <script src="../static/js/destinations.js"></script>
+    <script src="{% static 'js/destinations.js' %}"></script>
 </body>
 </html>
