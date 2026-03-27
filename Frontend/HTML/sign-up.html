@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +42,7 @@
 
         <p class="switch-text">
           Already have an account?
-          <a href="sign-in.html" class="link">Login</a>
+          <a href="/sign-in" class="link">Login</a>
         </p>
 
         <p id="signupMessage" class="message"></p>
@@ -48,6 +50,6 @@
     </div>
   </main>
 
-  <script src="../static/JS/sign-in-up.js"></script>
+  <script src="{% static 'js/sign-in-up.js' %}"></script>
 </body>
 </html>

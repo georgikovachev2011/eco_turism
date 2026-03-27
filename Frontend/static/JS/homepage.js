@@ -25,3 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+console.log(localStorage.getItem("authUser"))
+if(localStorage.getItem("authUser")){
+    document.getElementById("login-button").remove()
+}

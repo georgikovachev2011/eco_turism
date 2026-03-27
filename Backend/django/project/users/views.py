@@ -89,6 +89,13 @@ def resetpass(request):
     
     return HttpResponse()
 
+
+def signUpPage(request):
+    return render(request, 'sign-up.html')
+
+
+def signinPage(request):
+    return render(request, 'sign-in.html')
 def Codeconfirm(request):
      serializer = Codeconfirm(data=request.data)
      serializer.is_valid()
