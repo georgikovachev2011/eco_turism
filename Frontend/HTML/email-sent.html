@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +41,7 @@
         const resetLink = document.getElementById("resetLink");
 
         if (token) {
-            resetLink.href = `reset-password.html?token=${token}`;
+            resetLink.href = `/reset_password?token=${token}`;
         } else {
             resetLink.textContent = "Invalid reset link";
             resetLink.removeAttribute("href");

@@ -36,9 +36,21 @@ if (signupForm) {
 
     message.textContent = "Registration successful. Redirecting to login...";
     message.classList.add("success");
-
+    fetch('/users/signup/', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        username: user.username,
+        email: user.email,
+        password1: user.password,
+        password2: user.password
+    })
+})
+.catch(error => console.error(error));
     setTimeout(() => {
-      window.location.href = "sign-in.html";
+      window.location.href = "/sign-in";
     }, 1500);
   });
 }
@@ -56,6 +68,20 @@ if (signinForm) {
 
     const savedUser = JSON.parse(localStorage.getItem("authUser"));
 
+    fetch('/users/signin/', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        username: username,
+        password: password,
+    })
+})
+.then(_ =>  setTimeout(() => {
+      window.location.href = "/home";
+    }, 1500))
+.catch(error => console.error(error));
     if (!savedUser) {
       message.textContent = "No account found. Please register first.";
       message.classList.add("error");
