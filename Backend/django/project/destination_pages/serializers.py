@@ -11,3 +11,12 @@ class ListDestinationsPagesSerializer(serializers.Serializer):
     dollars_per_night = serializers.IntegerField()
     activities = serializers.CharField()
     amenities = serializers.CharField()
+    images = serializers.SerializerMethodField()
+    id = serializers.IntegerField()
+
+
+    def get_images(self, obj):
+        return [f"/Images/{obj.id}/{i}"for i in range(1,5)]
+    
+class DestinationPageSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
