@@ -1,38 +1,47 @@
+const burger = document.querySelector(".burger");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeMenu = document.querySelector(".close-menu");
+
+if (burger && mobileMenu) {
+    burger.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+    });
+}
+
+if (closeMenu && mobileMenu) {
+    closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+    });
+}
+
 const minSlider = document.getElementById("minSlider");
 const maxSlider = document.getElementById("maxSlider");
 const priceValue = document.getElementById("priceValue");
 
-const MAX = 200;
+function updatePrice() {
+    let min = parseInt(minSlider.value);
+    let max = parseInt(maxSlider.value);
 
-function updateSliders() {
-  let min = parseInt(minSlider.value);
-  let max = parseInt(maxSlider.value);
+    if (min > max) {
+        [min, max] = [max, min];
+    }
 
-  // Prevent crossing
-  if (min > max) {
-    minSlider.value = max;
-    min = max;
-  }
-
-  if (max < min) {
-    maxSlider.value = min;
-    max = min;
-  }
-
-  // Update text
-  priceValue.textContent = `$${min} - $${max}`;
-
-  // Convert to %
-  const minPercent = (min / MAX) * 100;
-  const maxPercent = (max / MAX) * 100;
-
-  // Visual fill
-  minSlider.style.background = `linear-gradient(to right, var(--green) ${minPercent}%, #cfcac4 ${minPercent}%)`;
-
-  maxSlider.style.background = `linear-gradient(to right, var(--green) ${maxPercent}%, #cfcac4 ${maxPercent}%)`;
+    priceValue.textContent = `${min} lv - ${max} lv`;
 }
 
-minSlider.addEventListener("input", updateSliders);
-maxSlider.addEventListener("input", updateSliders);
+if (minSlider && maxSlider && priceValue) {
+    minSlider.addEventListener("input", updatePrice);
+    maxSlider.addEventListener("input", updatePrice);
+    updatePrice();
+}
 
-updateSliders();
+const heartButtons = document.querySelectorAll(".heart");
+
+heartButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        button.classList.toggle("active");
+        button.textContent = button.classList.contains("active") ? "♥" : "♡";
+    });
+});
