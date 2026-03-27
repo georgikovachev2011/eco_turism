@@ -34,11 +34,13 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', include('home.urls')),
     path('', include('users.urls')),
+    path('', include('home.urls')),
     path('booking/', include('booking.urls')),
     path('service/', include('service.urls')),
+    path('homepage_response/',include('homepage_response.urls')),
     path('users/',include('users.urls')),
+    path('destination_pages/', include('destination_pages.urls')),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name="schema-swagger-ui"),
     re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name="schema-redoc"),
 ]

@@ -11,6 +11,7 @@ import smtplib
 from email.mime.text import MIMEText
 import random
 from . serializers import ResetpasswordSerializer
+from . serializers import Codeconfirm
 
 
 @swagger_auto_schema(
@@ -21,7 +22,10 @@ from . serializers import ResetpasswordSerializer
 def signup(request):
     serializer = SignupSerializer(data=request.data)
     serializer.is_valid()
-
+    if Userdata.objects.filter(username=username).exists():
+        raise serializers.ValidationError({
+            "username": "A user with this username already exists."
+        })
     if serializer.data['password1'] != serializer.data['password2']:
         raise serializers.ValidationError({
                 "password": "Passwords do not match."
@@ -47,7 +51,9 @@ def signin(request):
         user = Userdata.objects.get(username=serializer.validated_data['username'])
     except Userdata.DoesNotExist:
         raise serializers.ValidationError({
-            "detail": "Invalid username or password"
+            "detail": "Invalid username or password"  
+
+
         })
     
     if serializer.data['password'] != user.password:
@@ -69,11 +75,13 @@ def resetpass(request):
     serializer = ResetpasswordSerializer(data=request.data)
     serializer.is_valid()
     user = Userdata.objects.get(email=serializer.validated_data['email'])
+    if not user:
+        return HttpResponse("User not found", status=404)
     user.code = Onetimecode
     user.save()
     msg = MIMEText(f"Your one time use code is {Onetimecode}")
     msg["Subject"] = "Reset_email"
-    msg["From"] = "uadm szfc qyaa ymsi"
+    msg["From"] = "djangodjangiev@gmail.com"
     msg["To"] = serializer.data["email"]
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login("djangodjangiev@gmail.com", "uadm szfc qyaa ymsi")
@@ -88,3 +96,16 @@ def signUpPage(request):
 
 def signinPage(request):
     return render(request, 'sign-in.html')
+def Codeconfirm(request):
+     serializer = Codeconfirm(data=request.data)
+     serializer.is_valid()
+     try:
+         user = Userdata.objects.get(code=serializer.data['code'])
+         user.password = serializer.data['password']
+         user.save()
+     except Userdata.DoesNotExist:
+        raise serializers.ValidationError({
+            "detail": "Invalid code"  
+        })
+     return HttpResponse()
+     
