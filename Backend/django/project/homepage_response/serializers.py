@@ -7,5 +7,10 @@ class ListDestinationsSerializer(serializers.Serializer):
     short_description = serializers.CharField(max_length=128)
     rating = serializers.FloatField()
     reviews = serializers.IntegerField()
-    num_of_guests = serializers.IntegerField()
     dollars_per_night = serializers.IntegerField()
+    image = serializers.SerializerMethodField()
+    num_of_guests = serializers.IntegerField()
+    id = serializers.IntegerField()
+
+    def get_image(self, obj):
+        return f"/Images/{obj.id}/1"
