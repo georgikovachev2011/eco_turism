@@ -42,8 +42,12 @@ INSTALLED_APPS = [
     'booking',
     'service',
     'home',
+<<<<<<< HEAD
     'signup',  
     'homepage_response',
+=======
+    'users',  
+>>>>>>> a38be17fb633de999515caa6a51943c469273ad2
 ]
 
 MIDDLEWARE = [

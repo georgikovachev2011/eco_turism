@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".burger");
     const mobileMenu = document.querySelector(".mobile-menu");
     const closeMenu = document.querySelector(".close-menu");
+    const favoriteButtons = document.querySelectorAll(".favorite");
 
     if (burger && mobileMenu) {
         burger.addEventListener("click", () => {
@@ -14,4 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
             mobileMenu.classList.remove("active");
         });
     }
+
+    favoriteButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            button.classList.toggle("active");
+            button.textContent = button.classList.contains("active") ? "♥" : "♡";
+        });
+    });
 });
