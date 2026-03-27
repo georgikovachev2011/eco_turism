@@ -37,12 +37,9 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('booking/', include('booking.urls')),
     path('service/', include('service.urls')),
-<<<<<<< HEAD
     path('signup/',include('signup.urls')),
     path('homepage_response/',include('homepage_response.urls')),
-=======
     path('users/',include('users.urls')),
->>>>>>> a38be17fb633de999515caa6a51943c469273ad2
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name="schema-swagger-ui"),
     re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name="schema-redoc"),
 ]
