@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorites</title>
-    <link rel="stylesheet" href="../static/css/fav.css" />
-    <link rel="stylesheet" href="{% static 'css/favorites.css' %}" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../static/css/contaxts.css">
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
 </head>
 <body>
     <header>
@@ -21,8 +21,8 @@
                 <a href="homepage.html" class="header-button">Home</a>
                 <a href="destinations.html" class="header-button">Destinations</a>
                 <a href="about.html" class="header-button">About</a>
-                <a href="contacts.html" class="header-button">Contact</a>
-                <a href="favorites.html" class="header-button selected">♡ Favorites</a>
+                <a href="contacts.html" class="header-button selected">Contact</a>
+                <a href="favorites.html" class="header-button">♡ Favorites</a>
                 <a href="sign-in.html" class="login-btn">↪ Вход</a>
             </div>
         </nav>
@@ -49,22 +49,71 @@
         </div>
     </header>
 
-    <main class="container">
-        <div class="page-header">
-            <div class="page-title">
-                <div class="icon">❤</div>
-                <h1>My Favorites</h1>
-            </div>
-            <div class="subtext">0 destinations saved</div>
-        </div>
+    <div class="contact-header">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you</p>
+    </div>
 
-        <div class="card">
-            <div class="heart">♡</div>
-            <h2>No favorites yet</h2>
-            <p>Start exploring and save your favorite destinations for easy access.</p>
-            <button class="btn" onclick="window.location.href='destinations.html'">Browse Destinations</button>
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+
+                <div class="info-item">
+                    <div class="icon">📍</div>
+                    <div class="info-text">
+                        <h4>Address</h4>
+                        <p>Eco District, Nature Valley</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon">✉️</div>
+                    <div class="info-text">
+                        <h4>Email</h4>
+                        <p>hello@beyondthecity.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon">📞</div>
+                    <div class="info-text">
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" placeholder="How can we help?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell us more about your inquiry..."></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
-    </main>
+    </section>
 
     <footer>
         <div class="footer-container">
@@ -81,7 +130,7 @@
                 <h3>Quick Links</h3>
                 <a href="destinations.html">Browse Destinations</a>
                 <a href="about.html">About Us</a>
-                <a href="contacts.html">Contact</a>
+                <a href="contaxts.html">Contact</a>
                 <a href="favorites.html">My Favorites</a>
             </div>
 
@@ -98,7 +147,7 @@
         </div>
     </footer>
 
-    <script src="../static/js/fav.js"></script>
-    <script src="{% static 'js/favorites.js' %}"></script>
+    <script src="../static/js/contaxts.js"></script>
+    <script src="{% static 'js/contaxts.js' %}"></script>
 </body>
 </html>
