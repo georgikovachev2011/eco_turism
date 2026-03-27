@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="{% static 'css/destinations.css' %}">
     <title>Destinations</title>
 </head>
-
 <body>
+
     <header>
         <nav>
             <div class="logo">Beyond the City</div>
@@ -24,20 +24,43 @@
     </header>
 
     <main>
-        <h1><strong>Explore Destinations</strong></h1>
-        <h4>Find your perfect rural escape</h4>
+<div class="filters">
+  <h2>Filters</h2>
 
-        <h3><strong>Filters</strong></h3>
-        <p><strong>Region</strong></p>
+  <!-- Search -->
+  <label>Search</label>
+  <div class="search-box">
+    <input type="text" placeholder="Search destinations...">
+  </div>
 
-        <div class="dropdown">
-            <button onclick="toggleDropdown()" class="dropbtn">Add Region</button>
-            <div id="dropdownMenu" class="dropdown-content">
-                <a href="#">Mountain</a>
-                <a href="#">Farm</a>
-                <a href="#">River</a>
-            </div>
-        </div>
+  <!-- Region -->
+  <label>Region</label>
+  <select>
+    <option>All regions</option>
+    <option>Europe</option>
+    <option>Asia</option>
+    <option>America</option>
+  </select>
+
+  <!-- Type -->
+  <label>Type</label>
+  <select>
+    <option>All types</option>
+    <option>Beach</option>
+    <option>Mountain</option>
+    <option>City</option>
+  </select>
+
+  <!-- Price -->
+  <div class="price-label">
+    Price Range: <span id="priceValue">$0 - $200</span>
+  </div>
+
+  <div class="slider-group">
+    <input type="range" id="minSlider" min="0" max="200" value="0">
+    <input type="range" id="maxSlider" min="0" max="200" value="200">
+  </div>
+</div>
 
         <p><strong>Types</strong></p>
         <a href="destination1.html"><img src="https://stockcake.com/i/forest-cabin-evening_1240191_316448" alt="Mountain View">Mountain View Lodge</a>
@@ -78,6 +101,7 @@
             © 2026 Beyond the City. All rights reserved. Promoting sustainable and responsible tourism.
         </div>
     </footer>
+        <script src="../static/JS/destinations.js"></script>
     <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
