@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Beyond the City</title>
     <link rel="stylesheet" href="../static/css/homepage.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
 </head>
@@ -21,7 +21,7 @@
                 <a href="homepage.html" class="header-button selected">Home</a>
                 <a href="destinations.html" class="header-button">Destinations</a>
                 <a href="about.html" class="header-button">About</a>
-                <a href="contacts.html" class="header-button">Contact</a>
+                <a href="contaxts.html" class="header-button">Contact</a>
                 <a href="sign-in.html" class="login-btn">↪ Вход</a>
             </div>
         </nav>
@@ -41,8 +41,8 @@
                 <a href="homepage.html" class="mobile-link">Home</a>
                 <a href="destinations.html" class="mobile-link">Destinations</a>
                 <a href="about.html" class="mobile-link">About</a>
-                <a href="contacts.html" class="mobile-link">Contact</a>
-                <a href="#" class="mobile-link favorites-link">♡ Favorites</a>
+                <a href="contaxts.html" class="mobile-link">Contact</a>
+                <a href="favorites.html" class="mobile-link favorites-link">♡ Favorites</a>
                 <a href="sign-in.html" class="mobile-login-btn">↪ Вход</a>
             </div>
         </div>
@@ -52,9 +52,9 @@
         <section class="hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>Escape to Nature</h1>
-                <p>Discover authentic rural experiences and eco-friendly getaways beyond the city</p>
-                <a href="#" class="hero-btn">Explore Destinations <span>→</span></a>
+                <h1>Escape to Bulgaria’s Hidden Rural Gems</h1>
+                <p>Discover authentic guest houses, mountain views, traditional homes, and peaceful getaways beyond the city.</p>
+                <a href="destinations.html" class="hero-btn">Explore Destinations <span>→</span></a>
             </div>
         </section>
 
@@ -62,19 +62,19 @@
             <div class="feature-box">
                 <div class="feature-icon">🌿</div>
                 <h3>Sustainable Travel</h3>
-                <p>All our destinations follow eco-friendly practices and support local communities</p>
+                <p>Stay in carefully selected places that support local communities and nature-friendly tourism.</p>
             </div>
 
             <div class="feature-box">
                 <div class="feature-icon">♡</div>
                 <h3>Authentic Experiences</h3>
-                <p>Immerse yourself in rural life and connect with nature in meaningful ways</p>
+                <p>Enjoy traditional architecture, homemade food, local culture, and memorable countryside stays.</p>
             </div>
 
             <div class="feature-box">
                 <div class="feature-icon">📍</div>
-                <h3>Hidden Gems</h3>
-                <p>Explore carefully curated destinations away from tourist crowds</p>
+                <h3>Unique Destinations</h3>
+                <p>From the Rhodopes to Zheravna, explore guest houses full of character and charm.</p>
             </div>
         </section>
 
@@ -84,118 +84,124 @@
                     <h2>Featured Destinations</h2>
                     <p>Handpicked escapes for your next adventure</p>
                 </div>
-                <a href="#" class="view-all">View all <span>→</span></a>
+                <a href="destinations.html" class="view-all">View all <span>→</span></a>
             </div>
 
             <div class="cards">
-                <div class="card">
-                    <div class="card-image image-one">
+                <a href="destination1.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination1/GaitanaImg1.jpg" alt="Gaitana Guest House">
                         <span class="badge">Featured</span>
-                        <button class="favorite">♡</button>
+                        <button class="favorite" type="button">♡</button>
                     </div>
                     <div class="card-content">
-                        <h3>Mountain View Eco Lodge</h3>
-                        <p class="location">📍 Northern Mountains</p>
-                        <p class="description">Sustainable eco-lodge with panoramic mountain views and modern amenities.</p>
+                        <h3>Gaitana Guest House</h3>
+                        <p class="location">📍 Shiroka Laka, Smolyan</p>
+                        <p class="description">Traditional Rhodope guest house with stone-and-wood architecture, mountain views, and a cozy atmosphere.</p>
                         <p class="rating">⭐ <strong>4.9</strong> (127 reviews)</p>
                         <div class="card-footer">
-                            <span>👥 Up to 4 guests</span>
-                            <span class="price">$120<span>/night</span></span>
+                            <span>👥 Up to 8 guests</span>
+                            <span class="price">120 lv<span>/night</span></span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card-image image-two">
+                <a href="destination2.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination2/LeshtemImg1.jpg" alt="Leshten Guest Homes">
                         <span class="badge">Featured</span>
-                        <button class="favorite">♡</button>
+                        <button class="favorite" type="button">♡</button>
                     </div>
                     <div class="card-content">
-                        <h3>Riverside Farm Stay</h3>
-                        <p class="location">📍 Valley Region</p>
-                        <p class="description">Experience authentic farm life by the river with organic farming activities.</p>
-                        <p class="rating">⭐ <strong>4.7</strong> (89 reviews)</p>
+                        <h3>Leshten Guest Homes</h3>
+                        <p class="location">📍 Leshten, Blagoevgrad</p>
+                        <p class="description">Panoramic traditional homes with authentic architecture, peaceful surroundings, and beautiful mountain scenery.</p>
+                        <p class="rating">⭐ <strong>4.8</strong> (98 reviews)</p>
                         <div class="card-footer">
                             <span>👥 Up to 6 guests</span>
-                            <span class="price">$85<span>/night</span></span>
+                            <span class="price">150 lv<span>/night</span></span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card-image image-three">
+                <a href="destination3.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination3/VeskoandSuziImg1.jpg" alt="Vesko and Suzi Guest House">
                         <span class="badge">Featured</span>
-                        <button class="favorite">♡</button>
+                        <button class="favorite" type="button">♡</button>
                     </div>
                     <div class="card-content">
-                        <h3>Alpine Cabin Retreat</h3>
-                        <p class="location">📍 Alpine District</p>
-                        <p class="description">Cozy wooden cabin in the Alps, perfect for a peaceful mountain escape.</p>
-                        <p class="rating">⭐ <strong>4.8</strong> (156 reviews)</p>
+                        <h3>Vesko &amp; Suzi Guest House</h3>
+                        <p class="location">📍 Kovachevitsa, Blagoevgrad</p>
+                        <p class="description">Authentic stone house with warm interiors, local character, and a quiet setting perfect for nature lovers.</p>
+                        <p class="rating">⭐ <strong>4.7</strong> (89 reviews)</p>
                         <div class="card-footer">
                             <span>👥 Up to 5 guests</span>
-                            <span class="price">$150<span>/night</span></span>
+                            <span class="price">110 lv<span>/night</span></span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card-image image-four">
+                <a href="destination4.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination4/GelaImg1.jpg" alt="Gela Guest House Silence">
                         <span class="badge">Featured</span>
-                        <button class="favorite">♡</button>
+                        <button class="favorite" type="button">♡</button>
                     </div>
                     <div class="card-content">
-                        <h3>Forest Cottage Hideaway</h3>
-                        <p class="location">📍 Green Forest</p>
-                        <p class="description">Quiet cottage surrounded by pine trees, ideal for unplugging and relaxing.</p>
-                        <p class="rating">⭐ <strong>4.6</strong> (102 reviews)</p>
-                        <div class="card-footer">
-                            <span>👥 Up to 3 guests</span>
-                            <span class="price">$95<span>/night</span></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image image-five">
-                        <span class="badge">Featured</span>
-                        <button class="favorite">♡</button>
-                    </div>
-                    <div class="card-content">
-                        <h3>Sunny Meadow House</h3>
-                        <p class="location">📍 Countryside Plains</p>
-                        <p class="description">Bright countryside house with open fields and fresh local breakfasts.</p>
-                        <p class="rating">⭐ <strong>4.5</strong> (74 reviews)</p>
+                        <h3>Gela Guest House Silence</h3>
+                        <p class="location">📍 Gela, Smolyan</p>
+                        <p class="description">A peaceful mountain retreat surrounded by nature, fresh air, and wide views over the Rhodope peaks.</p>
+                        <p class="rating">⭐ <strong>4.8</strong> (104 reviews)</p>
                         <div class="card-footer">
                             <span>👥 Up to 4 guests</span>
-                            <span class="price">$110<span>/night</span></span>
+                            <span class="price">100 lv<span>/night</span></span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card-image image-six">
+                <a href="destination5.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination5/YovinaKushtaImg1.jpg" alt="Yovina House">
                         <span class="badge">Featured</span>
-                        <button class="favorite">♡</button>
+                        <button class="favorite" type="button">♡</button>
                     </div>
                     <div class="card-content">
-                        <h3>Lakeview Nature Lodge</h3>
-                        <p class="location">📍 Crystal Lake</p>
-                        <p class="description">Enjoy lake views, nature walks, and a peaceful atmosphere far from the city.</p>
-                        <p class="rating">⭐ <strong>4.9</strong> (134 reviews)</p>
+                        <h3>Yovina House</h3>
+                        <p class="location">📍 Zheravna, Sliven</p>
+                        <p class="description">A charming revival-style house with wooden interiors, a cozy yard, and an unforgettable historic atmosphere.</p>
+                        <p class="rating">⭐ <strong>4.9</strong> (156 reviews)</p>
                         <div class="card-footer">
-                            <span>👥 Up to 2 guests</span>
-                            <span class="price">$130<span>/night</span></span>
+                            <span>👥 Up to 6 guests</span>
+                            <span class="price">140 lv<span>/night</span></span>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <a href="destination6.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination6/EcoHouseImg1.jpg" alt="Eco House Zheravna">
+                        <span class="badge">Featured</span>
+                        <button class="favorite" type="button">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Eco House Zheravna</h3>
+                        <p class="location">📍 Zheravna, Sliven</p>
+                        <p class="description">Eco-style accommodation that blends traditional design, green outdoor areas, and a calm countryside setting.</p>
+                        <p class="rating">⭐ <strong>4.7</strong> (91 reviews)</p>
+                        <div class="card-footer">
+                            <span>👥 Up to 4 guests</span>
+                            <span class="price">115 lv<span>/night</span></span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </section>
 
         <section class="cta">
             <h2>Ready for Your Next Adventure?</h2>
-            <p>Browse our collection of unique rural and eco-tourism destinations</p>
-            <a href="#" class="cta-btn">Start Exploring <span>→</span></a>
+            <p>Browse our collection of unique rural and eco-tourism destinations across Bulgaria.</p>
+            <a href="destinations.html" class="cta-btn">Start Exploring <span>→</span></a>
         </section>
     </main>
 
@@ -203,15 +209,17 @@
         <div class="footer-container">
             <div class="footer-col">
                 <div class="footer-logo">Beyond the City</div>
-                <p>Discover authentic rural experiences, eco-friendly accommodations, and sustainable travel destinations beyond the urban landscape.</p>
+                <p>
+                    Discover authentic rural experiences, eco-friendly accommodations, and sustainable travel destinations beyond the urban landscape.
+                </p>
             </div>
 
             <div class="footer-col">
                 <h3>Quick Links</h3>
-                <a href="#">Browse Destinations</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-                <a href="#">My Favorites</a>
+                <a href="destinations.html">Browse Destinations</a>
+                <a href="about.html">About Us</a>
+                <a href="contaxts.html">Contact</a>
+                <a href="favorites.html">My Favorites</a>
             </div>
 
             <div class="footer-col">
@@ -226,7 +234,8 @@
             © 2026 Beyond the City. All rights reserved. Promoting sustainable and responsible tourism.
         </div>
     </footer>
-    <script src="../static/JS/homepage.js"></script>
+
+    <script src="../static/js/homepage.js"></script>
     <script src="{% static 'js/homepage.js' %}"></script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Your Email</title>
+    <link rel="stylesheet" href="../static/css/forgot_password.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-bg"></div>
+
+    <main class="forgot-container">
+        <div class="forgot-box">
+            <div class="success-icon">
+                <i class="fa-solid fa-envelope-circle-check"></i>
+            </div>
+
+            <div class="brand">Beyond the City</div>
+            <h1>Email Sent</h1>
+            <p class="subtitle">We sent you a password reset link.</p>
+            <p class="info-text">
+                For this demo, click the link below to go to the reset password page.
+            </p>
+
+            <div class="demo-link-box">
+                <a id="resetLink" href="#">Open Reset Password Page</a>
+            </div>
+
+            <div class="bottom-text" style="margin-top: 20px;">
+                <p>Back to <a href="sign-in.html">Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get("token");
+        const resetLink = document.getElementById("resetLink");
+
+        if (token) {
+            resetLink.href = `reset-password.html?token=${token}`;
+        } else {
+            resetLink.textContent = "Invalid reset link";
+            resetLink.removeAttribute("href");
+        }
+    </script>
+</body>
+</html>
