@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    fetch("/homepage_response/")
+    fetch("homepage.jspage_response/")
         .then((response) => {
             if (!response.ok) {
                 throw new Error("Failed to load homepage data.");

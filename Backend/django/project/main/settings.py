@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'homepage_response',
     'users',  
     'destination_pages',
-    'filter',
 ]
 
 MIDDLEWARE = [

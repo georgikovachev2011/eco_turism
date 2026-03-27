@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             signinMessage.classList.add("success");
 
             setTimeout(() => {
-                window.location.href = "/home";
+                window.location.href = "homepage.js";
             }, 800);
         } else {
             signinMessage.textContent = "Invalid username or password.";
