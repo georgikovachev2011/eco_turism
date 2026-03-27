@@ -80,3 +80,11 @@ def resetpass(request):
         server.send_message(msg)
     
     return HttpResponse()
+
+
+def signUpPage(request):
+    return render(request, 'sign-up.html')
+
+
+def signinPage(request):
+    return render(request, 'sign-in.html')

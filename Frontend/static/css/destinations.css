@@ -28,6 +28,8 @@
 .filters h2 {
   font-size: 18px;
   margin-bottom: 18px;
+  text-align: center;
+
 }
 
 /* Labels */
@@ -130,6 +132,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  padding: 0px 40px 0px 40px; 
 }
 
 /* Card */
@@ -155,7 +158,7 @@ body {
 
 .card-img img {
   width: 75%;
-  aspect-ratio: 4/3 ;
+  aspect-ratio:16/9 ;
   object-fit: cover;
   display: block;
 }
@@ -202,4 +205,7 @@ body {
   margin: 4px 0 0;
   color: #6b7280;
   font-size: 14px;
+}
+.section-title{
+  text-align: center;
 }
