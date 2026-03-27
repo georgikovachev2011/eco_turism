@@ -16,7 +16,7 @@ class ListDestinationsPagesSerializer(serializers.Serializer):
 
 
     def get_images(self, obj):
-        return [f"/Images/{obj.id}/{i}"for i in range(1,5)]
+        return [f"../static/Images/{obj.id}/{i}.jpg"for i in range(1,5)]
     
 class DestinationPageSerializer(serializers.Serializer):
     id = serializers.IntegerField()

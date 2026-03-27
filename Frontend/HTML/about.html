@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,48 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About</title>
   <link rel="stylesheet" href="../static/css/about.css" />
-  <link rel="stylesheet" href="../static/css/homepage.css" />
+  <link rel="stylesheet" href="{% static 'css/about.css' %}" />
 </head>
 <body>
   <header>
-        <nav>
-            <div class="logo desktop-logo">
-                <span class="logo-icon">B</span>
-                <span class="logo-text">Beyond the City</span>
-            </div>
+    <nav>
+      <div class="logo desktop-logo">
+        <span class="logo-icon">B</span>
+        <span class="logo-text">Beyond the City</span>
+      </div>
 
-            <button class="burger" aria-label="Open menu">☰</button>
+      <button class="burger" aria-label="Open menu">☰</button>
 
-            <div class="nav-links">
-                <a href="/home" class="header-button selected">Home</a>
-                <a href="/destinations" class="header-button">Destinations</a>
-                <a href="/about" class="header-button">About</a>
-                <a href="/contaxts" class="header-button">Contact</a>
-                <a href="/sign_in" class="login-btn">↪ Вход</a>
-            </div>
-        </nav>
+      <div class="nav-links">
+        <a href="/home" class="header-button">Home</a>
+        <a href="/destinations" class="header-button">Destinations</a>
+        <a href="/about" class="header-button selected">About</a>
+        <a href="/contacts" class="header-button">Contact</a>
+        <a href="/favorites" class="header-button">♡ Favorites</a>
+        <a href="/sign-in" class="login-btn">↪ Вход</a>
+      </div>
+    </nav>
 
-        <div class="mobile-menu">
-            <div class="mobile-menu-top">
-                <div class="logo">
-                    <span class="logo-icon">B</span>
-                    <span class="logo-text">Beyond the City</span>
-                </div>
-                <button class="close-menu" aria-label="Close menu">✕</button>
-            </div>
-
-            <div class="mobile-menu-line"></div>
-
-            <div class="mobile-menu-links">
-                <a href="/home" class="mobile-link">Home</a>
-                <a href="/destinations" class="mobile-link">Destinations</a>
-                <a href="/about" class="mobile-link">About</a>
-                <a href="/destination" class="mobile-link">Contact</a>
-                <a href="#" class="mobile-link favorites-link">♡ Favorites</a>
-                <a href="sign-in.html" class="mobile-login-btn">↪ Вход</a>
-            </div>
+    <div class="mobile-menu">
+      <div class="mobile-menu-top">
+        <div class="logo">
+          <span class="logo-icon">B</span>
+          <span class="logo-text">Beyond the City</span>
         </div>
-    </header>
+        <button class="close-menu" aria-label="Close menu">✕</button>
+      </div>
+
+      <div class="mobile-menu-line"></div>
+
+      <div class="mobile-menu-links">
+        <a href="homepage.html" class="mobile-link">Home</a>
+        <a href="destinations.html" class="mobile-link">Destinations</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="contacts.html" class="mobile-link">Contact</a>
+        <a href="favorites.html" class="mobile-link favorites-link">♡ Favorites</a>
+        <a href="sign-in.html" class="mobile-login-btn">↪ Вход</a>
+      </div>
+    </div>
+  </header>
 
   <section class="hero">
     <div class="overlay">
@@ -112,7 +111,7 @@
     <div class="join-content">
       <h1>Join Our Journey</h1>
       <p>Discover the beauty and tranquility that awaits beyond the city limits</p>
-      <button onclick="window.location.href='/destinations'">Explore Destinations</button>
+      <button onclick="window.location.href='destinations.html'">Explore Destinations</button>
     </div>
   </section>
 
@@ -129,10 +128,10 @@
 
       <div class="footer-col">
         <h3>Quick Links</h3>
-        <a href="#">Browse Destinations</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-        <a href="#">My Favorites</a>
+        <a href="destinations.html">Browse Destinations</a>
+        <a href="about.html">About Us</a>
+        <a href="contacts.html">Contact</a>
+        <a href="favorites.html">My Favorites</a>
       </div>
 
       <div class="footer-col">
@@ -148,6 +147,7 @@
     </div>
   </footer>
 
-  <script src="../static/JS/about.js"></script>
+  <script src="../static/js/about.js"></script>
+  <script src="{% static 'js/about.js' %}"></script>
 </body>
 </html>

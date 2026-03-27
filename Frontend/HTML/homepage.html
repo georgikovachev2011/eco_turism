@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +18,12 @@
             <button class="burger" aria-label="Open menu">☰</button>
 
             <div class="nav-links">
-                <a href="/home" class="header-button selected">Home</a>
-                <a href="/destinations" class="header-button">Destinations</a>
-                <a href="/about" class="header-button">About</a>
-                <a href="/contaxts" class="header-button">Contact</a>
-                <a id="login-button" href="sign-in.html" class="login-btn">↪ Вход</a>
+                <a href="homepage.html" class="header-button selected">Home</a>
+                <a href="destinations.html" class="header-button">Destinations</a>
+                <a href="about.html" class="header-button">About</a>
+                <a href="contacts.html" class="header-button">Contact</a>
+                <a href="favorites.html" class="header-button">♡ Favorites</a>
+                <a href="sign-in.html" class="login-btn">↪ Вход</a>
             </div>
         </nav>
 
@@ -40,12 +39,12 @@
             <div class="mobile-menu-line"></div>
 
             <div class="mobile-menu-links">
-                <a href="/home" class="mobile-link">Home</a>
-                <a href="/destinations" class="mobile-link">Destinations</a>
-                <a href="/about" class="mobile-link">About</a>
-                <a href="/contaxts" class="mobile-link">Contact</a>
-                <a href="/favorites" class="mobile-link favorites-link">♡ Favorites</a>
-                <a id="login-button" href="sign-in.html" class="mobile-login-btn">↪ Вход</a>
+                <a href="homepage.html" class="mobile-link">Home</a>
+                <a href="destinations.html" class="mobile-link">Destinations</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="contacts.html" class="mobile-link">Contact</a>
+                <a href="favorites.html" class="mobile-link favorites-link">♡ Favorites</a>
+                <a href="sign-in.html" class="mobile-login-btn">↪ Вход</a>
             </div>
         </div>
     </header>
@@ -56,7 +55,7 @@
             <div class="hero-content">
                 <h1>Escape to Bulgaria’s Hidden Rural Gems</h1>
                 <p>Discover authentic guest houses, mountain views, traditional homes, and peaceful getaways beyond the city.</p>
-                <a href="/destinations" class="hero-btn">Explore Destinations <span>→</span></a>
+                <a href="destinations.html" class="hero-btn">Explore Destinations <span>→</span></a>
             </div>
         </section>
 
@@ -86,13 +85,14 @@
                     <h2>Featured Destinations</h2>
                     <p>Handpicked escapes for your next adventure</p>
                 </div>
-                <a href="/destinations" class="view-all">View all <span>→</span></a>
+                <a href="destinations.html" class="view-all">View all <span>→</span></a>
             </div>
 
             <div class="cards">
-                <a href="/destination" class="card">
+<<<<<<< HEAD
+                <a href="destination1.html" class="card">
                     <div class="card-image">
-                        <img src="../Images/1/GaitanaImg1.jpg" alt="Gaitana Guest House">
+                        <img src="../Images/destination1/GaitanaImg1.jpg" alt="Gaitana Guest House">
                         <span class="badge">Featured</span>
                         <button class="favorite" type="button">♡</button>
                     </div>
@@ -107,13 +107,105 @@
                         </div>
                     </div>
                 </a>
+
+                <a href="destination2.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination2/LeshtemImg1.jpg" alt="Leshten Guest Homes">
+                        <span class="badge">Featured</span>
+                        <button class="favorite" type="button">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Leshten Guest Homes</h3>
+                        <p class="location">📍 Leshten, Blagoevgrad</p>
+                        <p class="description">Panoramic traditional homes with authentic architecture, peaceful surroundings, and beautiful mountain scenery.</p>
+                        <p class="rating">⭐ <strong>4.8</strong> (98 reviews)</p>
+                        <div class="card-footer">
+                            <span>👥 Up to 6 guests</span>
+                            <span class="price">150 lv<span>/night</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="destination3.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination3/VeskoandSuziImg1.jpg" alt="Vesko and Suzi Guest House">
+                        <span class="badge">Featured</span>
+                        <button class="favorite" type="button">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Vesko &amp; Suzi Guest House</h3>
+                        <p class="location">📍 Kovachevitsa, Blagoevgrad</p>
+                        <p class="description">Authentic stone house with warm interiors, local character, and a quiet setting perfect for nature lovers.</p>
+                        <p class="rating">⭐ <strong>4.7</strong> (89 reviews)</p>
+                        <div class="card-footer">
+                            <span>👥 Up to 5 guests</span>
+                            <span class="price">110 lv<span>/night</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="destination4.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination4/GelaImg1.jpg" alt="Gela Guest House Silence">
+                        <span class="badge">Featured</span>
+                        <button class="favorite" type="button">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Gela Guest House Silence</h3>
+                        <p class="location">📍 Gela, Smolyan</p>
+                        <p class="description">A peaceful mountain retreat surrounded by nature, fresh air, and wide views over the Rhodope peaks.</p>
+                        <p class="rating">⭐ <strong>4.8</strong> (104 reviews)</p>
+                        <div class="card-footer">
+                            <span>👥 Up to 4 guests</span>
+                            <span class="price">100 lv<span>/night</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="destination5.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination5/YovinaKushtaImg1.jpg" alt="Yovina House">
+                        <span class="badge">Featured</span>
+                        <button class="favorite" type="button">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Yovina House</h3>
+                        <p class="location">📍 Zheravna, Sliven</p>
+                        <p class="description">A charming revival-style house with wooden interiors, a cozy yard, and an unforgettable historic atmosphere.</p>
+                        <p class="rating">⭐ <strong>4.9</strong> (156 reviews)</p>
+                        <div class="card-footer">
+                            <span>👥 Up to 6 guests</span>
+                            <span class="price">140 lv<span>/night</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="destination6.html" class="card">
+                    <div class="card-image">
+                        <img src="../Images/destination6/EcoHouseImg1.jpg" alt="Eco House Zheravna">
+                        <span class="badge">Featured</span>
+                        <button class="favorite" type="button">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Eco House Zheravna</h3>
+                        <p class="location">📍 Zheravna, Sliven</p>
+                        <p class="description">Eco-style accommodation that blends traditional design, green outdoor areas, and a calm countryside setting.</p>
+                        <p class="rating">⭐ <strong>4.7</strong> (91 reviews)</p>
+                        <div class="card-footer">
+                            <span>👥 Up to 4 guests</span>
+                            <span class="price">115 lv<span>/night</span></span>
+                        </div>
+                    </div>
+                </a>
+=======
+>>>>>>> 5e7eb4907fa7193498a84479f91412ed40cfaf8e
             </div>
         </section>
 
         <section class="cta">
             <h2>Ready for Your Next Adventure?</h2>
             <p>Browse our collection of unique rural and eco-tourism destinations across Bulgaria.</p>
-            <a href="/destinations" class="cta-btn">Start Exploring <span>→</span></a>
+            <a href="destinations.html" class="cta-btn">Start Exploring <span>→</span></a>
         </section>
     </main>
 
@@ -128,10 +220,10 @@
 
             <div class="footer-col">
                 <h3>Quick Links</h3>
-                <a href="/destinations">Browse Destinations</a>
-                <a href="/about">About Us</a>
-                <a href="/destination">Contact</a>
-                <a href="/favorites">My Favorites</a>
+                <a href="destinations.html">Browse Destinations</a>
+                <a href="about.html">About Us</a>
+                <a href="contacts.html">Contact</a>
+                <a href="favorites.html">My Favorites</a>
             </div>
 
             <div class="footer-col">
@@ -147,6 +239,7 @@
         </div>
     </footer>
 
+    <script src="../static/js/homepage.js"></script>
     <script src="{% static 'js/homepage.js' %}"></script>
 </body>
 </html>
