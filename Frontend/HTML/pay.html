@@ -1,45 +1,42 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
-    <link rel="stylesheet" href="../static/CSS/pay.css">
+    <link rel="stylesheet" href="{% static 'css/pay.css' %}">
 </head>
 <body>
+    <div class="container">
+        <h2>Payment Details</h2>
+        <p class="subtitle">Enter your card information to complete the purchase</p>
 
-<div class="container">
-    <h2>Payment Details</h2>
-    <p class="subtitle">Enter your card information to complete the purchase</p>
+        <form id="payment-form">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
 
-    <form id="payment-form">
-        <label>Card Number</label>
-        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+            <label for="cardholderName">Cardholder Name</label>
+            <input type="text" id="cardholderName" placeholder="John Doe" required>
 
-        <label>Cardholder Name</label>
-        <input type="text" placeholder="John Doe">
+            <div class="row">
+                <div class="col">
+                    <label for="expiry">Expiry Date</label>
+                    <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                </div>
 
-        <div class="row">
-            <div class="col">
-                <label>Expiry Date</label>
-                <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                <div class="col">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+                </div>
             </div>
 
-            <div class="col">
-                <label>CVV</label>
-                <input type="text" id="cvv" placeholder="123" maxlength="3">
-            </div>
-        </div>
+            <button type="submit">Pay Now</button>
+        </form>
 
-        <button type="submit">Pay Now</button>
-    </form>
+        <p class="secure">🔒 Secure payment powered by Stripe</p>
+    </div>
 
-    <p class="secure">🔒 Secure payment powered by Stripe</p>
-</div>
-
-<script src="../static/JS/pay.js"></script>
-
+    <script src="{% static 'js/pay.js' %}"></script>
 </body>
 </html>

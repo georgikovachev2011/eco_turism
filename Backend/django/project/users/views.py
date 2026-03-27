@@ -22,7 +22,7 @@ from . serializers import Codeconfirm
 def signup(request):
     serializer = SignupSerializer(data=request.data)
     serializer.is_valid()
-    if Userdata.objects.filter(username=username).exists():
+    if Userdata.objects.filter(username=serializer.validated_data['username']).exists():
         raise serializers.ValidationError({
             "username": "A user with this username already exists."
         })

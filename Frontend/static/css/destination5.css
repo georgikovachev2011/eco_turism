@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 /* Destination5.css - Specific styles for destination5.html */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-=======
-/* Destination5.css - Specific styles for /destination */
->>>>>>> 675089a92251ad6ba30137fa7702e9331c6031e8
 
 html {
     scroll-behavior: smooth;
