@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-class Signup(serializers.Serializer):
+class SignupSerializer(serializers.Serializer):
     name = serializers.CharField(max_length=100)
     email = serializers.EmailField()
     phone_num = serializers.CharField()
