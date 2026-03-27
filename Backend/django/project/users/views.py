@@ -7,6 +7,11 @@ from . serializers import SignupSerializer
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework import serializers
 from . serializers import SigninSerializer
+import smtplib
+from email.mime.text import MIMEText
+import random
+from . serializers import ResetpasswordSerializer
+
 
 @swagger_auto_schema(
         method="post",
@@ -52,4 +57,26 @@ def signin(request):
         return
     else:
         return HttpResponse()
+
+@swagger_auto_schema(
+        method="post",
+        request_body=ResetpasswordSerializer
+)
+@api_view(["POST"])
+def resetpass(request):
+    rand0m = random.randint(0, 99999)
+    Onetimecode = f"{rand0m:05d}"
+    serializer = ResetpasswordSerializer(data=request.data)
+    serializer.is_valid()
+    user = Userdata.objects.get(email=serializer.validated_data['email'])
+    user.code = Onetimecode
+    user.save()
+    msg = MIMEText(f"Your one time use code is {Onetimecode}")
+    msg["Subject"] = "Reset_email"
+    msg["From"] = "uadm szfc qyaa ymsi"
+    msg["To"] = serializer.data["email"]
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+        server.login("djangodjangiev@gmail.com", "uadm szfc qyaa ymsi")
+        server.send_message(msg)
     
+    return HttpResponse()

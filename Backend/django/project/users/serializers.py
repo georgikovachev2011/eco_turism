@@ -9,3 +9,7 @@ class SignupSerializer(serializers.Serializer):
 class SigninSerializer(serializers.Serializer):
     username = serializers.CharField(max_length=100)
     password = serializers.CharField()
+
+class ResetpasswordSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    code = serializers.CharField()
