@@ -38,7 +38,7 @@ if (signupForm) {
     message.classList.add("success");
 
     setTimeout(() => {
-      window.location.href = "signin.html";
+      window.location.href = "sign-in.html";
     }, 1500);
   });
 }
