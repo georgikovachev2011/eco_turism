@@ -13,4 +13,4 @@ class ListDestinationsSerializer(serializers.Serializer):
     id = serializers.IntegerField()
 
     def get_image(self, obj):
-        return f"/Images/{obj.id}/1"
+        return f"../static/Images/{obj.id}/1.jpg"
