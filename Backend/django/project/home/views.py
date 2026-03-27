@@ -33,3 +33,10 @@ def sign_in(request):
 
 def sign_up(request):
     return render(request, 'sign_up.html')
+
+def signUpPage(request):
+    return render(request, 'sign-up.html')
+
+
+def signinPage(request):
+    return render(request, 'sign-in.html')
