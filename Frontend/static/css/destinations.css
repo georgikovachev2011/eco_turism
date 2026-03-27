@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -155,7 +155,7 @@ nav {
   background-color: #ddd;
 }
 
-/* клас за показване */
+/* клас за показване 
 .show {
   display: block;
-}
+} */
