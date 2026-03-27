@@ -1,0 +1,244 @@
+/* Destination3.css - Specific styles for destination3.html */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #193126;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main h6 {
+    font-size: 1rem;
+    color: #5a875f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 30px 0 10px;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    color: #193126;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #5d695f;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+main h3 {
+    font-size: 1.5rem;
+    color: #193126;
+    margin: 40px 0 20px;
+}
+
+main ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+main li {
+    font-size: 1rem;
+    color: #627065;
+    margin-bottom: 8px;
+}
+
+h2 strong {
+    color: #193126;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 40px 0;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    color: #193126;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d7d7d2;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-family: inherit;
+}
+
+form input[type="submit"] {
+    background-color: #5a875f;
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #4c7451;
+}
+
+.fav-btn {
+    background-color: #ffffff;
+    border: 2px solid #5a875f;
+    color: #5a875f;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.fav-btn.active {
+    background-color: #5a875f;
+    color: #ffffff;
+}
+
+.fav-btn .heart {
+    font-size: 1.2rem;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    min-height: 450px;
+    max-height: 750px;
+    border: none;
+    border-radius: 12px;
+    margin: 20px 0;
+    display: block;
+}
+
+.info {
+    background-color: #f3f2ed;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.info h2 {
+    font-size: 1.8rem;
+    color: #193126;
+    margin-bottom: 20px;
+}
+
+.info h3 {
+    font-size: 1.3rem;
+    color: #4f8159;
+    margin: 20px 0 10px;
+}
+
+.info p {
+    font-size: 1rem;
+    color: #627065;
+    margin-bottom: 10px;
+}
+
+.info b {
+    color: #193126;
+}
+
+.activity-card,
+.amenity-card,
+.attraction-card {
+    background-color: #ffffff;
+    border: 1px solid #e7e4dc;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.activity-card h4,
+.amenity-card h4,
+.attraction-card h4 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: #193126;
+}
+
+.activity-card p,
+.amenity-card p,
+.attraction-card p {
+    margin: 0;
+    color: #5d695f;
+    font-size: 0.95rem;
+}
+
+.images-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.images-layout img {
+    width: 100%;
+    max-width: none;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+.location-card {
+    background-color: #ffffff;
+    border: 1px solid #e7e4dc;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    margin: 20px 0;
+}
+
+.location-card h3 {
+    font-size: 1.4rem;
+    color: #193126;
+    margin-bottom: 10px;
+}
+
+.location-card p {
+    font-size: 1rem;
+    color: #5d695f;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    main img {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .info {
+        padding: 20px;
+    }
+}
