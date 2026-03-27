@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="../static/css/destination4.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <title>Gela Guest House Silence</title>
 </head>
@@ -43,10 +44,12 @@
 
     <main>
         <h2>Gela Guest House Silence – Гела</h2>
+        <div class="images-layout">
             <img src="../Images/destination4/GelaImg1.jpg">
             <img src="../Images/destination4/GelaImg2.jpg">
             <img src="../Images/destination4/GelaImg3.jpg">
             <img src="../Images/destination4/GelaImg4.jpg">
+        </div>
         <h6>Featured</h6>
         <h1><strong>Gela Guest House Silence</strong></h1>
         <p>Област Благоевград</p>
@@ -56,23 +59,28 @@
            Подходяща е за хора, които търсят тишина и релакс далеч от натовареното ежедневие.
         </p>
 
-        <h3><strong>Activities</strong></h3>
-        <ul>
-            <li>Wine tastings</li>
-            <li>Vineyard tours</li>
-            <li>Photography sessions</li>
-            <li>Picnics in the vineyard</li>
-            <li>Sunset viewing</li>
-        </ul>
-
-        <h3><strong>Amenities</strong></h3>
-        <ul>
-            <li>Cozy cottage accommodation</li>
-            <li>Outdoor seating area</li>
-            <li>Fire pit</li>
-            <li>Wine cellar access</li>
-            <li>Private vineyard access</li>
-        </ul>
+        <div class="cards-grid">
+            <div class="activity-card">
+                <h4>Activities</h4>
+                <ul class="activities-list">
+                    <li>Wine tastings</li>
+                    <li>Vineyard tours</li>
+                    <li>Photography sessions</li>
+                    <li>Picnics in the vineyard</li>
+                    <li>Sunset viewing</li>
+                </ul>
+            </div>
+            <div class="amenity-card">
+                <h4>Amenities</h4>
+                <ul class="amenities-list">
+                    <li>Cozy cottage accommodation</li>
+                    <li>Outdoor seating area</li>
+                    <li>Fire pit</li>
+                    <li>Wine cellar access</li>
+                    <li>Private vineyard access</li>
+                </ul>
+            </div>
+        </div>
 
         <h2><strong>Book Your Stay</strong></h2>
         <form action="user_base.py">
@@ -97,42 +105,38 @@
 
         <h6>You wont be charged now, we will contact you about the reservation</h6>
         <h2>Nearby Routes and Trails</h2>
-<div>
-    <section>
-        <h3><strong>Location</strong></h3>
-        <p>Coordinates: 41.6410821, 24.569039</p>
-        <iframe
-        width="600"
-        height="450"
-        style="border:0"
-        loading="lazy"
-        allowfullscreen
-        src="https://www.google.com/maps?q=41.6410821,24.569039&hl=bg&z=15&output=embed">
-    </iframe>
-    </section>
-    <section>
-        <h3>Връх Орфей</h3>
-        <p>🕒 Време: ~3.5 – 4.5 часа (отиване и връщане)</p>
-        <p>📏 Разстояние: ~10 км (кръгов маршрут)</p>
-        <p>⚡ Трудност: 🟡 средна</p>
-        <p>📈 Денивелация: ~500–750 м</p>
-    </section>
-    <section>
-        <p>🕒 Време: ~10–15 минути</p>
-        <p>📏 Разстояние: почти нищо 😄</p>
-        <p>⚡ Трудност: 🟢 много лесна</p>
-    </section>
-    <section>
-        <p>🕒 Време: ~3.5 часа</p>
-        <p>📏 Разстояние: ~9–11 км</p>
-        <p>⚡ Трудност: 🟡 средна</p>
-    </section>
-    <section>
-        <p>🕒 Време: ~1.5 часа</p>
-        <p>📏 Разстояние: ~3–4 км</p>
-        <p>⚡ Трудност: 🟢 лесна</p>    
-    </section>
-</div>
+        <div class="location-card">
+            <h3><strong>Location</strong></h3>
+            <p>Coordinates: 41.6410821, 24.569039</p>
+            <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=41.6410821,24.569039&hl=bg&z=15&output=embed"></iframe>
+        </div>
+        <div class="cards-grid">
+            <div class="attraction-card">
+                <h4>Връх Орфей</h4>
+                <p>🕒 Време: ~3.5 – 4.5 часа (отиване и връщане)</p>
+                <p>📏 Разстояние: ~10 км (кръгов маршрут)</p>
+                <p>⚡ Трудност: 🟡 средна</p>
+                <p>📈 Денивелация: ~500–750 м</p>
+            </div>
+            <div class="attraction-card">
+                <h4>Кратък панорамен маршрут</h4>
+                <p>🕒 Време: ~10–15 минути</p>
+                <p>📏 Разстояние: почти нищо 😄</p>
+                <p>⚡ Трудност: 🟢 много лесна</p>
+            </div>
+            <div class="attraction-card">
+                <h4>Изглед към местната долина</h4>
+                <p>🕒 Време: ~3.5 часа</p>
+                <p>📏 Разстояние: ~9–11 км</p>
+                <p>⚡ Трудност: 🟡 средна</p>
+            </div>
+            <div class="attraction-card">
+                <h4>Еко пътека</h4>
+                <p>🕒 Време: ~1.5 часа</p>
+                <p>📏 Разстояние: ~3–4 км</p>
+                <p>⚡ Трудност: 🟢 лесна</p>
+            </div>
+        </div>
     </main>
 <footer>
         <div class="footer-container">

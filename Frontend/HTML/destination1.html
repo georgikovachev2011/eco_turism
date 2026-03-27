@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/favbutton.css"> 
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="../static/css/destination1.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <title>Широка Лъка – Къща за гости Гайтана</title>
 </head>
@@ -44,10 +45,12 @@
 
     <main>
         <h2>Къща за гости Гайтана – Широка лъка</h2>
-        <img src="../Images/destination1/GaitanaImg1.jpg">
-        <img src="../Images/destination1/GaitanaImg2.jpg">
-        <img src="../Images/destination1/GaitanaImg3.jpg">
-        <img src="../Images/destination1/GaitanaImg4.jpg">
+        <div class="images-layout">
+            <img src="../Images/destination1/GaitanaImg1.jpg">
+            <img src="../Images/destination1/GaitanaImg2.jpg">
+            <img src="../Images/destination1/GaitanaImg3.jpg">
+            <img src="../Images/destination1/GaitanaImg4.jpg">
+        </div>
         <h6>Featured</h6>
         <h1><strong>Община Смолян</strong></h1>
         <p>
@@ -58,22 +61,27 @@
             Подходяща е както за семейства, така и за групи, които търсят спокойствие и близост до природата.
         </p>
 
-        <h3><strong>Activities</strong></h3>
-        <ul>
-            <li>Guided hikes in the Rhodope Mountains</li>
-            <li>Visiting local museums and churches</li>
-            <li>Traditional Bulgarian cuisine workshops</li>
-            <li>Bird watching and nature photography</li>
-        </ul>
-
-        <h3><strong>Amenities</strong></h3>
-        <ul>
-            <li>Free Wi-Fi</li>
-            <li>Parking</li>
-            <li>Breakfast included</li>
-            <li>Fireplace</li>
-            <li>Garden</li>
-        </ul>
+        <div class="cards-grid">
+            <div class="activity-card">
+                <h4>Activities</h4>
+                <ul class="activities-list">
+                    <li>Guided hikes in the Rhodope Mountains</li>
+                    <li>Visiting local museums and churches</li>
+                    <li>Traditional Bulgarian cuisine workshops</li>
+                    <li>Bird watching and nature photography</li>
+                </ul>
+            </div>
+            <div class="amenity-card">
+                <h4>Amenities</h4>
+                <ul class="amenities-list">
+                    <li>Free Wi-Fi</li>
+                    <li>Parking</li>
+                    <li>Breakfast included</li>
+                    <li>Fireplace</li>
+                    <li>Garden</li>
+                </ul>
+            </div>
+        </div>
 
         <h2><strong>Book Your Stay</strong></h2>
         <form action="user_base.py">
@@ -107,39 +115,37 @@
     btn.classList.toggle("active");
   }
 </script> -----------------------------------------------------------------------------------------------------------------------------------------
-       <iframe
-            width="700"
-            height="500"
-            src="https://www.google.com/maps?q=41.67754,24.5886112&z=15&output=embed">
-        </iframe>
+       <div class="location-card">
+            <h3><strong>Location</strong></h3>
+            <p>Coordinates: 42.83419, 26.46149 (approx.)</p>
+            <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=41.67754,24.5886112&z=15&output=embed"></iframe>
+        </div>
     <div class="info">
-        <h2>📌 Координати</h2>
-        <p><b>41.67754, 24.5886112</b></p>
         <h2>🏔️ Атракции наблизо</h2>
-        <h3>🌄 Широка Лъка (самото село)</h3>
-        <p>
-        Архитектурен резерват с автентични родопски къщи, музеи и църкви.
-        </p>
-
-        <h3>🌲 Екопътека към Широка Лъка</h3>
-        <p>
-            🕒 Време: ~3–4 часа<br>
-            📏 Разстояние: ~7.5 км<br>
-            ⚡ Трудност: средна
-        </p>
-
-        <h3>🏔️ Голям кръг около Широка Лъка</h3>
-        <p>
-            🕒 Време: ~5–7 часа<br>
-            📏 Разстояние: ~25 км<br>
-            ⚡ Трудност: средна
-        </p>
-        <h3>⛰️ Широка Лъка – връх Перелик</h3>
-        <p>
-            🕒 Време: ~6–7 часа (в едната посока)<br>
-            📏 Разстояние: ~18–20 км<br>
-            ⚡ Трудност: трудна
-        </p>
+        <div class="cards-grid">
+            <div class="attraction-card">
+                <h4>🌄 Широка Лъка (самото село)</h4>
+                <p>Архитектурен резерват с автентични родопски къщи, музеи и църкви.</p>
+            </div>
+            <div class="attraction-card">
+                <h4>🌲 Екопътека към Широка Лъка</h4>
+                <p>🕒 Време: ~3–4 часа<br>
+                📏 Разстояние: ~7.5 км<br>
+                ⚡ Трудност: средна</p>
+            </div>
+            <div class="attraction-card">
+                <h4>🏔️ Голям кръг около Широка Лъка</h4>
+                <p>🕒 Време: ~5–7 часа<br>
+                📏 Разстояние: ~25 км<br>
+                ⚡ Трудност: средна</p>
+            </div>
+            <div class="attraction-card">
+                <h4>⛰️ Широка Лъка – връх Перелик</h4>
+                <p>🕒 Време: ~6–7 часа (в едната посока)<br>
+                📏 Разстояние: ~18–20 км<br>
+                ⚡ Трудност: трудна</p>
+            </div>
+        </div>
     </div>
 </main>
 

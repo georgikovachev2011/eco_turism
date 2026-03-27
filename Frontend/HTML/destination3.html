@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="../static/css/destination3.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <title>Vesko & Suzi Guest House</title>
 </head>
@@ -41,10 +42,12 @@
     </header>
 
     <main>
-        <img src="../Images/destination3/VeskoandSuziImg1.jpg">
-        <img src="../Images/destination3/VeskoandSuziImg2.jpg">
-        <img src="../Images/destination3/VeskoandSuziImg3.jpg">
-        <img src="../Images/destination3/VeskoandSuziImg4.jpg">
+        <div class="images-layout">
+            <img src="../Images/destination3/VeskoandSuziImg1.jpg">
+            <img src="../Images/destination3/VeskoandSuziImg2.jpg">
+            <img src="../Images/destination3/VeskoandSuziImg3.jpg">
+            <img src="../Images/destination3/VeskoandSuziImg4.jpg">
+        </div>
 
         <h6>Featured</h6>
         <h1><strong>Vesko & Suzi Guest House</strong></h1>
@@ -54,24 +57,29 @@
             Интериорът е запазен в типичен възрожденски стил, а гостите могат да се насладят на домашна кухня и тиха атмосфера.
         </p>
 
-        <h3><strong>Activities</strong></h3>
-        <ul>
-            <li>Hiking in the Pirin Mountains</li>
-            <li>Skiing in winter season</li>
-            <li>Nature photography tours</li>
-            <li>Wildlife observation</li>
-            <li>Traditional village walks</li>
-        </ul>
-
-        <h3><strong>Amenities</strong></h3>
-        <ul>
-            <li>Wood burning stove</li>
-            <li>Fully equipped kitchen</li>
-            <li>Hot tub</li>
-            <li>Mountain bike rental</li>
-            <li>Board games and books</li>
-            <li>Sauna</li>
-        </ul>
+        <div class="cards-grid">
+            <div class="activity-card">
+                <h4>Activities</h4>
+                <ul class="activities-list">
+                    <li>Hiking in the Pirin Mountains</li>
+                    <li>Skiing in winter season</li>
+                    <li>Nature photography tours</li>
+                    <li>Wildlife observation</li>
+                    <li>Traditional village walks</li>
+                </ul>
+            </div>
+            <div class="amenity-card">
+                <h4>Amenities</h4>
+                <ul class="amenities-list">
+                    <li>Wood burning stove</li>
+                    <li>Fully equipped kitchen</li>
+                    <li>Hot tub</li>
+                    <li>Mountain bike rental</li>
+                    <li>Board games and books</li>
+                    <li>Sauna</li>
+                </ul>
+            </div>
+        </div>
 
         <h2><strong>Book Your Stay</strong></h2>
         <form action="user_base.py">
@@ -95,43 +103,41 @@
         </form>
 
         <h6>You wont be charged now, we will contact you about the reservation</h6>
-        <iframe
-            width="700"
-            height="500"
-            src="https://www.google.com/maps?q=41.6818226,23.8247966&z=15&output=embed">
-        </iframe>
-    <div class="info">
-        <h2>📌 Координати</h2>
-        <p><b>41.6818226, 23.8247966</b></p>
+        <div class="location-card">
+            <h3><strong>Location</strong></h3>
+            <p>Coordinates: 41.6818226, 23.8247966</p>
+            <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=41.6818226,23.8247966&z=15&output=embed"></iframe>
+        </div>
         <h2>🏔️ Атракции наблизо</h2>
-        <h3>🏘️ с. Ковачевица (архитектурен резерват)</h3>
-        <p>
-            Село с автентични каменни къщи и уникална родопска атмосфера.
-        </p>
-        <h3>🌲 Каньонът на р. Канина</h3>
-        <p>
-            🕒 Време: ~2–3 часа<br>
-            📏 Разстояние: ~5–7 км<br>
-            ⚡ Тrudност: средна
-        </p>
-        <h3>🌄 с. Лещен</h3>
-        <p>
-            🕒 Време: ~2–3 часа (отиване и връщане)<br>
+        <div class="cards-grid">
+            <div class="attraction-card">
+                <h4>🏘️ с. Ковачевица (архитектурен резерват)</h4>
+                <p>Село с автентични каменни къщи и уникална родопска атмосфера.</p>
+            </div>
+            <div class="attraction-card">
+                <h4>🌲 Каньонът на р. Канина</h4>
+                <p>🕒 Време: ~2–3 часа<br>
+                📏 Разстояние: ~5–7 км<br>
+                ⚡ Трудност: средна</p>
+            </div>
+            <div class="attraction-card">
+        <h4>🌄 с. Лещен</h4>
+        <p>🕒 Време: ~2–3 часа (отиване и връщане)<br>
             📏 Разстояние: ~8–10 км<br>
-            ⚡ Тrudност: лесна към средна
-        </p>
-        <h3>🏞️ Екопътека Ковачевица – Рибново</h3>
-        <p>
-            🕒 Време: ~4–5 часа<br>
+            ⚡ Трудност: лесна към средна</p>
+        </div>
+        <div class="attraction-card">
+            <h4>🏞️ Екопътека Ковачевица – Рибново</h4>
+            <p>🕒 Време: ~4–5 часа<br>
             📏 Разстояние: ~12–14 км<br>
-            ⚡ Тrudност: средна
-        </p>
-        <h3>🌲 Район Кози камък</h3>
-        <p>
-            🕒 Време: ~3–4 часа<br>
+            ⚡ Трудност: средна</p>
+        </div>
+        <div class="attraction-card">
+            <h4>🌲 Район Кози камък</h4>
+            <p>🕒 Време: ~3–4 часа<br>
             📏 Разстояние: ~9–11 км<br>
-            ⚡ Тrudност: средна
-        </p>
+            ⚡ Трудност: средна</p>
+        </div>
     </div>
 </main>
 <footer>

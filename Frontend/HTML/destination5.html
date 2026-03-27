@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="../static/css/destination5.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <title>Yovina House</title>
 </head>
@@ -42,10 +43,12 @@
 
     <main>
         <h2>Yovina House – Жеравна</h2>
+        <div class="images-layout">
             <img src="../Images/destination5/YovinaKushtaImg1.jpg">
             <img src="../Images/destination5/YovinaKushtaImg2.jpg">
             <img src="../Images/destination5/YovinaKushtaImg3.jpg">
             <img src="../Images/destination5/YovinaKushtaImg4.jpg">
+        </div>
 
         <h6>Featured</h6>
         <h1><strong>Yovina House</strong></h1>
@@ -56,21 +59,26 @@
             Често е предпочитана от туристи заради автентичната атмосфера.
         </p>
 
-        <h3><strong>Activities</strong></h3>
-        <ul>
-            <li>Guided village tours in Zheravna</li>
-            <li>Bird watching in the surrounding nature</li>
-            <li>Visiting historical sites and museums</li>
-            <li>Traditional craft workshops</li>
-        </ul>
-
-        <h3><strong>Amenities</strong></h3>
-        <ul>
-            <li>Solar-powered electricity</li>
-            <li>Rainwater harvesting</li>
-            <li>Compostable toilets</li>
-            <li>Eco-friendly toiletries</li>
-        </ul>
+        <div class="cards-grid">
+            <div class="activity-card">
+                <h4>Activities</h4>
+                <ul class="activities-list">
+                    <li>Guided village tours in Zheravna</li>
+                    <li>Bird watching in the surrounding nature</li>
+                    <li>Visiting historical sites and museums</li>
+                    <li>Traditional craft workshops</li>
+                </ul>
+            </div>
+            <div class="amenity-card">
+                <h4>Amenities</h4>
+                <ul class="amenities-list">
+                    <li>Solar-powered electricity</li>
+                    <li>Rainwater harvesting</li>
+                    <li>Compostable toilets</li>
+                    <li>Eco-friendly toiletries</li>
+                </ul>
+            </div>
+        </div>
 
         <h2><strong>Book Your Stay</strong></h2>
         <form action="user_base.py">
@@ -94,11 +102,6 @@
         </form>
 
         <h6>You wont be charged now, we will contact you about the reservation</h6>
-        <iframe
-            width="700"
-            height="500"
-            src="https://www.google.com/maps?q=41.67754,24.5886112&z=15&output=embed">
-        </iframe>
     <div class="info">
         <h2>🏡 Къща за гости „Йовина къща“ – Жеравна</h2>
         <h2>📍 Местоположение и координати</h2>
@@ -132,6 +135,10 @@
     </div>
     <div class="section">
         <h2>📍 Карта</h2>
+    </div>
+    <div class="location-card">
+        <h3><strong>Location</strong></h3>
+        <p>Coordinates: 42.83419, 26.46149</p>
         <iframe 
              src="https://maps.google.com/maps?q=42.83419,26.46149&z=16&output=embed">
         </iframe>
@@ -143,13 +150,15 @@
     </div>
     <div class="section">
         <h2>🌄 Атракции наблизо</h2>
-        <ul>
-            <li>🏛️ Архитектурен резерват Жеравна</li>
-            <li>🏠 Къща музей Йордан Йovkov</li>
-            <li>🎨 Художествени галерии и възрожденски къщи</li>
-            <li>🌲 Стара планина – пътеки и гледки</li>
-            <li>🍖 Традиционни механи</li>
-        </ul>
+        <div class="attraction-card">
+            <ul class="attractions-list">
+                <li>🏛️ Архитектурен резерват Жеравна</li>
+                <li>🏠 Къща музей Йордан Йovkov</li>
+                <li>🎨 Художествени галерии и възрожденски къщи</li>
+                <li>🌲 Стара планина – пътеки и гледки</li>
+                <li>🍖 Традиционни механи</li>
+            </ul>
+        </div>
     </div>
 <div class="section">
     <h2>🥾 Походи и маршрути</h2>
@@ -166,9 +175,6 @@
         <li>🔴 Трудно – по-дълги преходи в Балкана</li>
     </ul>
 </div>
-
-</body>
-</html>
     </main>
 <footer>
         <div class="footer-container">
