@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'service',
     'home',
     'signup',  
+    'homepage_response',
 ]
 
 MIDDLEWARE = [
