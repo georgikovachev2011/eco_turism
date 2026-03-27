@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     'booking',
     'service',
     'home',
-    'signup',  
     'homepage_response',
     'users',  
+    'destination_pages',
 ]
 
 MIDDLEWARE = [
