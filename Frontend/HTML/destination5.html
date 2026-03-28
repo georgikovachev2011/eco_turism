@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="../static/css/destination-common.css">
     <link rel="stylesheet" href="../static/css/destination5.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <title>Yovina House</title>
@@ -60,6 +61,40 @@
             Стаите са обзаведени с дървени мебели, а дворът предлага уютна обстановка за почивка.
             Често е предпочитана от туристи заради автентичната атмосфера.
         </p>
+
+        <div class="destination-highlights">
+            <div class="destination-tags">
+                <span class="pill">Семейно</span>
+                <span class="pill">Спокойствие</span>
+                <span class="pill">Instagram spot</span>
+            </div>
+            <div class="destination-tags">
+                <span class="pill difficulty moderate">Умерено</span>
+                <span class="pill hidden-gem">Скрито бижу</span>
+            </div>
+        </div>
+
+        <div class="experience-section">
+            <div class="tip-card">
+                <h3>Съвет от местните</h3>
+                <p>Огледай се за малката чешма в края на улицата – там винаги има свеж въздух и цветя.</p>
+            </div>
+            <div class="fact-card">
+                <h3>Знаеш ли, че…</h3>
+                <p>Жеравна е предпочитан филмов декор, защото тук всичко е като запазено видео от една по-спокойна епоха.</p>
+            </div>
+        </div>
+
+        <section class="one-day-plan">
+            <h3>Как да прекараш 1 ден тук</h3>
+            <ul>
+                <li><strong>Сутрин:</strong> Разгледай китните улици и снимай дървените къщи.</li>
+                <li><strong>Обяд:</strong> Хапни в традиционна механа с местни ястия.</li>
+                <li><strong>Следобед:</strong> Разходка към близките гори и чаша чай на открито.</li>
+            </ul>
+        </section>
+
+        <button class="surprise-btn" type="button" onclick="surpriseMe()">Изненадай ме</button>
 
         <div class="cards-grid">
             <div class="activity-card">
@@ -208,5 +243,6 @@
         </div>
     </footer>
     <script src="{% static 'js/app.js' %}"></script>
+    <script src="../static/JS/destination-common.js"></script>
 </body>
 </html>

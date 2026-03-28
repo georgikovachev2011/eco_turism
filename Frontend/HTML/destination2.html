@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="../static/css/destination-common.css">
     <link rel="stylesheet" href="../static/css/destination2.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <title>Leshten Guest Homes</title>
@@ -59,6 +60,39 @@
             Къщите съчетават автентична архитектура с модерен комфорт и предлагат панорамни гледки към Родопите.
             Гостите могат да се насладят на тишина, уютни интериори и просторни дворове, подходящи за релакс.
         </p>
+
+        <div class="destination-highlights">
+            <div class="destination-tags">
+                <span class="pill">Приключение</span>
+                <span class="pill">Instagram spot</span>
+                <span class="pill">Семейно</span>
+            </div>
+            <div class="destination-tags">
+                <span class="pill difficulty easy">Лесно</span>
+            </div>
+        </div>
+
+        <div class="experience-section">
+            <div class="tip-card">
+                <h3>Съвет от местните</h3>
+                <p>Отиди рано сутрин, за да хванеш Лещен преди тълпите и да усетиш тишината на каменните улички.</p>
+            </div>
+            <div class="fact-card">
+                <h3>Знаеш ли, че…</h3>
+                <p>Лещен е възстановено село, изгорено през 1912 г., което днес сияе като живо възрожденско открито пространство.</p>
+            </div>
+        </div>
+
+        <section class="one-day-plan">
+            <h3>Как да прекараш 1 ден тук</h3>
+            <ul>
+                <li><strong>Сутрин:</strong> Разходка по каменните улички и кафе със сметана.</li>
+                <li><strong>Обяд:</strong> Обяд в рекава механа с гледка към долината.</li>
+                <li><strong>Следобед:</strong> Посещение на работилница за занаятчийски продукти и снимки на старите къщи.</li>
+            </ul>
+        </section>
+
+        <button class="surprise-btn" type="button" onclick="surpriseMe()">Изненадай ме</button>
 
         <div class="cards-grid">
             <div class="activity-card">
@@ -178,5 +212,6 @@
     </footer>
 
     <script src="{% static 'js/app.js' %}"></script>
+    <script src="../static/JS/destination-common.js"></script>
 </body>
 </html>

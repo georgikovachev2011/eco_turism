@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="../static/css/destination-common.css">
     <link rel="stylesheet" href="../static/css/destination4.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <title>Gela Guest House Silence</title>
@@ -60,6 +61,40 @@
            Тя предлага спокойствие, чист въздух и красива гледка към планинските върхове.
            Подходяща е за хора, които търсят тишина и релакс далеч от натовареното ежедневие.
         </p>
+
+        <div class="destination-highlights">
+            <div class="destination-tags">
+                <span class="pill">Спокойствие</span>
+                <span class="pill">Семейно</span>
+                <span class="pill">Instagram spot</span>
+            </div>
+            <div class="destination-tags">
+                <span class="pill difficulty easy">Лесно</span>
+                <span class="pill hidden-gem">Скрито бижу</span>
+            </div>
+        </div>
+
+        <div class="experience-section">
+            <div class="tip-card">
+                <h3>Съвет от местните</h3>
+                <p>Вземи бутилка вино от местната изба и я изпий на малката тераса при залез.</p>
+            </div>
+            <div class="fact-card">
+                <h3>Знаеш ли, че…</h3>
+                <p>Гела е известно със своята тишина и древни лозови насаждения, които обгръщат къщата в зелена прегръдка.</p>
+            </div>
+        </div>
+
+        <section class="one-day-plan">
+            <h3>Как да прекараш 1 ден тук</h3>
+            <ul>
+                <li><strong>Сутрин:</strong> Кратка разходка сред лозята и свеж въздух.</li>
+                <li><strong>Обяд:</strong> Спокойно хранене с домашни деликатеси в градината.</li>
+                <li><strong>Следобед:</strong> Четене или дрямка на верандата и залез със сладко вино.</li>
+            </ul>
+        </section>
+
+        <button class="surprise-btn" type="button" onclick="surpriseMe()">Изненадай ме</button>
 
         <div class="cards-grid">
             <div class="activity-card">
@@ -170,5 +205,6 @@
         </div>
     </footer>
     <script src="{% static 'js/app.js' %}"></script>
+    <script src="../static/JS/destination-common.js"></script>
 </body>
 </html>

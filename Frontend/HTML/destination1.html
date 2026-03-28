@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/favbutton.css"> 
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="../static/css/destination-common.css">
     <link rel="stylesheet" href="../static/css/destination1.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <title>Широка Лъка – Къща за гости Гайтана</title>
@@ -62,6 +63,40 @@
              с уютни стаи, просторна механа и красива гледка към планината.
             Подходяща е както за семейства, така и за групи, които търсят спокойствие и близост до природата.
         </p>
+
+        <div class="destination-highlights">
+            <div class="destination-tags">
+                <span class="pill">Спокойствие</span>
+                <span class="pill">Семейно</span>
+                <span class="pill">Instagram spot</span>
+            </div>
+            <div class="destination-tags">
+                <span class="pill difficulty moderate">Умерено</span>
+                <span class="pill hidden-gem">Скрито бижу</span>
+            </div>
+        </div>
+
+        <div class="experience-section">
+            <div class="tip-card">
+                <h3>Съвет от местните</h3>
+                <p>Питай домакина къде да гледаш изгрева над селото – там сутринта цялата долина грейва като на пощенска картичка.</p>
+            </div>
+            <div class="fact-card">
+                <h3>Знаеш ли, че…</h3>
+                <p>Широка Лъка е родно място на стотици родопски песни и легенди, а местните пазят тайни маршрути към забравени водопади.</p>
+            </div>
+        </div>
+
+        <section class="one-day-plan">
+            <h3>Как да прекараш 1 ден тук</h3>
+            <ul>
+                <li><strong>Сутрин:</strong> Разходка из селските улици и закуска с домашни баници.</li>
+                <li><strong>Обяд:</strong> Традиционно родопско ястие в механа с дървен огън.</li>
+                <li><strong>Следобед:</strong> Горска разходка и чай край камината в къщата за гости.</li>
+            </ul>
+        </section>
+
+        <button class="surprise-btn" type="button" onclick="surpriseMe()">Изненадай ме</button>
 
         <div class="cards-grid">
             <div class="activity-card">
@@ -182,5 +217,6 @@
         </div>
     </footer>
     <script src="{% static 'js/app.js' %}"></script>
+    <script src="../static/JS/destination-common.js"></script>
 </body>
 </html>

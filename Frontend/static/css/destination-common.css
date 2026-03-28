@@ -1,0 +1,172 @@
+.destination-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.destination-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid #dfe6dc;
+  background: #f4f7f2;
+  color: #32402c;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.pill.difficulty {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pill.easy {
+  background: #eaf6ea;
+  border-color: #bfe3b9;
+  color: #2c6b34;
+}
+
+.pill.moderate {
+  background: #fff5d6;
+  border-color: #eed588;
+  color: #8b6b1f;
+}
+
+.pill.hard {
+  background: #fde9e7;
+  border-color: #e7b3b0;
+  color: #9b2f2a;
+}
+
+.pill.hidden-gem {
+  background: #f6edff;
+  border-color: #d3b5f2;
+  color: #603a82;
+}
+
+.experience-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.tip-card,
+.fact-card,
+.one-day-plan {
+  background: #ffffff;
+  border: 1px solid #e8e5dc;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 18px 35px rgba(39, 54, 47, 0.08);
+}
+
+.tip-card h3,
+.fact-card h3,
+.one-day-plan h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+  color: #193126;
+}
+
+.tip-card p,
+.fact-card p {
+  margin: 0;
+  color: #5f6d61;
+  line-height: 1.8;
+}
+
+.one-day-plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.one-day-plan li {
+  background: #f7f7f4;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #e7e5df;
+  color: #5f6d61;
+}
+
+.one-day-plan li strong {
+  color: #193126;
+}
+
+.surprise-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 14px 26px;
+  border: none;
+  border-radius: 999px;
+  background: #4f7d5c;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.surprise-btn:hover {
+  background: #3f694b;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(79, 125, 92, 0.24);
+}
+
+.attraction-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.attraction-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.12);
+}
+
+.attraction-card::after {
+  content: 'Виж повече';
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  opacity: 0;
+  background: #4f7d5c;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.attraction-card:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 880px) {
+  .experience-section {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-highlights {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
