@@ -33,5 +33,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 if(localStorage.getItem("authUser")){
-    document.getElementById("login-button").remove()
+    document.getElementById("login-btn")?.remove();
 }

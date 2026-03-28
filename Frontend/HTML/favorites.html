@@ -8,21 +8,50 @@
     <title>Favorites</title>
      <link rel="stylesheet" href="../static/css/fav.css" />
      <link rel="stylesheet" href="../static/css/homepage.css" />
+     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+     <link rel="stylesheet" href="{% static 'css/fav.css' %}">
 </head>
 <body>
     <header>
-    <nav>
-      <div class="logo">Beyond the City</div>
-      <div class="burger">&#9776;</div>
-      <div class="nav-links">
-        <a href="/home" class="header-button">Home</a>
-        <a href="/destinations" class="header-button">Destinations</a>
-        <a href="/about" class="header-button">About</a>
-        <a href="/contaxts" class="header-button">Contact</a>
-        <a href="/favorites" class="header-button selected">Favorites</a>
-      </div>
-    </nav>
-  </header>
+        <nav>
+            <div class="logo desktop-logo">
+                <span class="logo-icon">B</span>
+                <span class="logo-text">Beyond the City</span>
+            </div>
+
+            <button class="burger" aria-label="Open menu">☰</button>
+
+            <div class="nav-links">
+                <a href="/home" class="header-button selected">Home</a>
+                <a href="/destinations" class="header-button">Destinations</a>
+                <a href="/about" class="header-button">About</a>
+                <a href="/contaxts" class="header-button">Contact</a>
+                <a href="/favorites" class="header-button">♡ Favorites</a>
+                <a href="/sign-in" class="login-btn">↪ Вход</a>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu-top">
+                <div class="logo">
+                    <span class="logo-icon">B</span>
+                    <span class="logo-text">Beyond the City</span>
+                </div>
+                <button class="close-menu" aria-label="Close menu">✕</button>
+            </div>
+
+            <div class="mobile-menu-line"></div>
+
+            <div class="mobile-menu-links">
+                <a href="/home" class="mobile-link">Home</a>
+                <a href="/destinations" class="mobile-link">Destinations</a>
+                <a href="/about" class="mobile-link">About</a>
+                <a href="/contaxts" class="mobile-link">Contact</a>
+                <a href="/favorites" class="mobile-link favorites-link">♡ Favorites</a>
+                <a href="/sign-in" class="mobile-login-btn">↪ Вход</a>
+            </div>
+        </div>
+    </header>
   <div class="container">
     
     <div class="header">

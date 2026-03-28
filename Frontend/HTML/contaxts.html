@@ -6,20 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-     <link rel="stylesheet" href="../static/css/about.css">
-    <link rel="stylesheet" href="../static/css/contaxts.css">
+     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contaxts.css' %}">
 </head>
 <body>
-    <header>
+  <header>
         <nav>
-            <div class="logo">Beyond the City</div>
-            <div class="burger">&#9776;</div>
+            <div class="logo desktop-logo">
+                <span class="logo-icon">B</span>
+                <span class="logo-text">Beyond the City</span>
+            </div>
+
+            <button class="burger" aria-label="Open menu">☰</button>
+
             <div class="nav-links">
-                <a href="/home" class="header-button">Home</a>
+                <a href="/home" class="header-button selected">Home</a>
                 <a href="/destinations" class="header-button">Destinations</a>
                 <a href="/about" class="header-button">About</a>
-                <a href="/contaxts" class="header-button selected">Contact</a>
-                <a href="/favorites" class="header-button">Favorites</a>
+                <a href="/contaxts" class="header-button">Contact</a>
+                <a href="/favorites" class="header-button">♡ Favorites</a>
+                <a href="/sign-in" class="login-btn">↪ Вход</a>
             </div>
         </nav>
     </header>

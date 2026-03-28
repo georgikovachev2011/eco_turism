@@ -91,6 +91,7 @@ if (signinForm) {
     if (username === savedUser.username && password === savedUser.password) {
       message.textContent = "Login successful.";
       message.classList.add("success");
+      
     } else {
       message.textContent = "Invalid username or password.";
       message.classList.add("error");

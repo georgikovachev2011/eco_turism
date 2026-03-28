@@ -7,23 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/destinations.css">
     <link rel="stylesheet" href="../static/CSS/homepage.css">
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <link rel="stylesheet" href="{% static 'css/destinations.css' %}">
     <title>Destinations</title>
 </head>
 <body>
 
-    <header>
+   <header>
         <nav>
-            <div class="logo">Beyond the City</div>
-            <div class="burger">&#9776;</div>
+            <div class="logo desktop-logo">
+                <span class="logo-icon">B</span>
+                <span class="logo-text">Beyond the City</span>
+            </div>
+
+            <button class="burger" aria-label="Open menu">☰</button>
+
             <div class="nav-links">
                 <a href="/home" class="header-button selected">Home</a>
                 <a href="/destinations" class="header-button">Destinations</a>
                 <a href="/about" class="header-button">About</a>
                 <a href="/contaxts" class="header-button">Contact</a>
-                <a href="/favorites" class="header-button">Favorites</a>
+                <a href="/favorites" class="header-button">♡ Favorites</a>
+                <a href="/sign-in" class="login-btn">↪ Вход</a>
             </div>
         </nav>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu-top">
+                <div class="logo">
+                    <span class="logo-icon">B</span>
+                    <span class="logo-text">Beyond the City</span>
+                </div>
+                <button class="close-menu" aria-label="Close menu">✕</button>
+            </div>
+
+            <div class="mobile-menu-line"></div>
+
+            <div class="mobile-menu-links">
+                <a href="/home" class="mobile-link">Home</a>
+                <a href="/destinations" class="mobile-link">Destinations</a>
+                <a href="/about" class="mobile-link">About</a>
+                <a href="/contaxts" class="mobile-link">Contact</a>
+                <a href="/favorites" class="mobile-link favorites-link">♡ Favorites</a>
+                <a href="/sign-in" class="mobile-login-btn">↪ Вход</a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -72,9 +100,9 @@
   <div class="card-grid">
 
     <!-- 1 -->
-    <a href="/destination" class="card">
+    <a href="/destination1" class="card">
       <div class="card-img">
-        <img src="https://bgstay.com/imgs/objects/62069/1.jpg">
+        <img src="static/Images/1/1.jpg">
         <span class="badge">Featured</span>
         <span class="heart">♡</span>
       </div>
@@ -85,9 +113,9 @@
     </a>
 
     <!-- 2 -->
-    <a href="/destination" class="card">
+    <a href="/destination2" class="card">
       <div class="card-img">
-        <img src="https://leshtenhomes.com/images/house1.jpg">
+        <img src="static/Images/2/1.jpg">
         <span class="badge">Featured</span>
         <span class="heart">♡</span>
       </div>
@@ -98,9 +126,9 @@
     </a>
 
     <!-- 3 -->
-    <a href="/destination" class="card">
+    <a href="/destination3" class="card">
       <div class="card-img">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/138450215.jpg">
+        <img src="static/Images/3/1.jpg">
         <span class="badge">Featured</span>
         <span class="heart">♡</span>
       </div>
@@ -111,9 +139,9 @@
     </a>
 
     <!-- 4 -->
-    <a href="/destination" class="card">
+    <a href="/destination4" class="card">
       <div class="card-img">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/210458019.jpg">
+        <img src="static/Images/4/1.jpg">
         <span class="badge">Featured</span>
         <span class="heart">♡</span>
       </div>
@@ -124,9 +152,9 @@
     </a>
 
     <!-- 5 -->
-    <a href="/destination" class="card">
+    <a href="/destination5" class="card">
       <div class="card-img">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/93874654.jpg">
+        <img src="static/Images/5/1.jpg">
         <span class="badge">Featured</span>
         <span class="heart">♡</span>
       </div>
@@ -137,9 +165,9 @@
     </a>
 
     <!-- 6 -->
-    <a href="/destination" class="card">
+    <a href="/destination6" class="card">
       <div class="card-img">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/207548512.jpg">
+        <img src="static/Images/6/1.jpg">
         <span class="badge">Featured</span>
         <span class="heart">♡</span>
       </div>
