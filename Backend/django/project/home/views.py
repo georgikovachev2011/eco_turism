@@ -40,3 +40,6 @@ def signUpPage(request):
 
 def signinPage(request):
     return render(request, 'sign-in.html')
+
+def ViewAllPage(request):
+    return render(request, 'destinations.html')
